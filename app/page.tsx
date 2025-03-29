@@ -94,8 +94,8 @@ export default function HomePage() {
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-md w-full">
               <div className="flex items-start">
                 <div className="flex-shrink-0 hidden sm:block">
-                  <div className="w-10 h-10 rounded-full bg-[#00CC66]/20 flex items-center justify-center">
-                    <Bell className="h-5 w-5 text-[#00CC66]" />
+                  <div className="w-10 h-10 rounded-full bg-[#4C4EFB]/20 flex items-center justify-center">
+                    <Bell className="h-5 w-5 text-[#4C4EFB]" />
                   </div>
                 </div>
                 <div className="ml-0 sm:ml-3 w-0 flex-1">
@@ -114,7 +114,7 @@ export default function HomePage() {
                     </Button>
                     <Button
                       size="sm"
-                      className="w-full xs:w-auto bg-[#00CC66] hover:bg-[#00BB55] text-white"
+                      className="w-full xs:w-auto bg-[#4C4EFB] hover:bg-[#00BB55] text-white"
                       onClick={() => {
                         setShowNotification(false)
                         document.getElementById("ai-assistant")?.scrollIntoView({ behavior: "smooth" })
@@ -152,7 +152,7 @@ export default function HomePage() {
               <PopoverTrigger asChild>
                 <Button
                   size="icon"
-                  className="h-14 w-14 rounded-full bg-[#00CC66] hover:bg-[#00BB55] text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="h-14 w-14 rounded-full bg-[#4C4EFB] hover:bg-[#00BB55] text-white shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <MessageSquare className="h-6 w-6" />
                 </Button>
@@ -166,7 +166,7 @@ export default function HomePage() {
                     className="w-full text-left p-3 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg flex items-center"
                     onClick={() => document.getElementById("loan-calculator")?.scrollIntoView({ behavior: "smooth" })}
                   >
-                    <CreditCard className="h-5 w-5 mr-3 text-[#00CC66]" />
+                    <CreditCard className="h-5 w-5 mr-3 text-[#4C4EFB]" />
                     <span>Calculate Loan</span>
                   </button>
                   <button
@@ -175,14 +175,14 @@ export default function HomePage() {
                       document.getElementById("currency-converter")?.scrollIntoView({ behavior: "smooth" })
                     }
                   >
-                    <Globe className="h-5 w-5 mr-3 text-[#00CC66]" />
+                    <Globe className="h-5 w-5 mr-3 text-[#4C4EFB]" />
                     <span>Convert Currency</span>
                   </button>
                   <button
                     className="w-full text-left p-3 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg flex items-center"
                     onClick={() => document.getElementById("ai-assistant")?.scrollIntoView({ behavior: "smooth" })}
                   >
-                    <MessageSquare className="h-5 w-5 mr-3 text-[#00CC66]" />
+                    <MessageSquare className="h-5 w-5 mr-3 text-[#4C4EFB]" />
                     <span>Chat with AI Assistant</span>
                   </button>
                   <div className="pt-2 border-t border-gray-200 dark:border-gray-700 mt-2">
@@ -196,9 +196,13 @@ export default function HomePage() {
       </AnimatePresence>
 
       {/* Hero Section */}
+      {/**
+        className="relative w-full py-20 md:py-32 overflow-hidden bg-gradient-to-br from-[##FFC000] via-[#003366] to-[#004488]
+       
+       **/}
       <section
         ref={heroRef}
-        className="relative w-full py-20 md:py-32 overflow-hidden bg-gradient-to-br from-[#002244] via-[#003366] to-[#004488]"
+        className="relative w-full py-20 md:py-32 -mt-20 overflow-hidden bg-[rgb(7,8,6)]"
       >
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -211,7 +215,7 @@ export default function HomePage() {
               repeat: Number.POSITIVE_INFINITY,
               repeatType: "reverse",
             }}
-            className="absolute -top-[40%] -right-[10%] w-[70%] h-[140%] bg-[#00CC66]/10 rounded-full blur-3xl"
+            className="absolute -top-[40%] -right-[10%] w-[70%] h-[140%] bg-[#4C4EFB]/10 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -224,7 +228,7 @@ export default function HomePage() {
               repeatType: "reverse",
               delay: 1,
             }}
-            className="absolute -bottom-[40%] -left-[10%] w-[70%] h-[140%] bg-[#00CC66]/10 rounded-full blur-3xl"
+            className="absolute -bottom-[40%] -left-[10%] w-[70%] h-[140%] bg-[#4C4EFB]/10 rounded-full blur-3xl"
           />
           <div className="absolute inset-0 bg-grid-white/[0.05] bg-grid-8 [mask-image:radial-gradient(white,transparent_85%)]"></div>
         </div>
@@ -253,7 +257,7 @@ export default function HomePage() {
                 transition={{ delay: 0.3, duration: 0.5 }}
                 className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm font-medium"
               >
-                <span className="flex h-2 w-2 rounded-full bg-[#00CC66] mr-2"></span>
+                <span className="flex h-2 w-2 rounded-full bg-[#4C4EFB] mr-2"></span>
                 <span className="animate-pulse">Empowering Financial Inclusion</span>
               </motion.div>
               <motion.h1
@@ -263,7 +267,7 @@ export default function HomePage() {
                 className="text-4xl md:text-6xl font-bold tracking-tighter text-white leading-tight"
               >
                 AI & Blockchain for{" "}
-                <span className="text-[#00CC66] relative">
+                <span className="text-[#4C4EFB] relative">
                   Financial Freedom
                   <motion.svg
                     initial={{ pathLength: 0 }}
@@ -276,7 +280,7 @@ export default function HomePage() {
                   >
                     <path
                       d="M2 10C45.6667 4 158.4 -4.8 356 10"
-                      stroke="#00CC66"
+                      stroke="#FFC000"
                       strokeWidth="3"
                       strokeLinecap="round"
                     />
@@ -300,7 +304,7 @@ export default function HomePage() {
               >
                 <Button
                   size="lg"
-                  className="bg-[#00CC66] hover:bg-[#00BB55] text-white rounded-full group transition-all duration-300 transform hover:translate-y-[-2px] shadow-lg hover:shadow-[#00CC66]/20"
+                  className="bg-[#4C4EFB] hover:bg-[#FFC000] text-white rounded-full group transition-all duration-300 transform hover:translate-y-[-2px] shadow-lg hover:shadow-[#4C4EFB]/20"
                 >
                   Get Started Today
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -328,13 +332,13 @@ export default function HomePage() {
                 className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-[#003366]/20 border border-white/10 backdrop-blur-sm transform"
               >
                 <Image
-                  src="/placeholder.svg?height=800&width=800"
+                  src='/hero.jpg'
                   alt="Financial Inclusion"
                   width={600}
                   height={600}
                   className="w-full h-auto object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#003366]/80 to-transparent"></div>
+                <div className="absolute inset-0 "></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <p className="font-bold text-xl">Empowering Communities</p>
                   <p className="text-white/80">Through financial technology</p>
@@ -350,7 +354,7 @@ export default function HomePage() {
                   repeat: Number.POSITIVE_INFINITY,
                   repeatType: "reverse",
                 }}
-                className="absolute -top-6 -right-6 w-32 h-32 bg-[#00CC66]/30 rounded-full blur-2xl"
+                className="absolute -top-6 -right-6 w-32 h-32 bg-[#4C4EFB]/30 rounded-full blur-2xl"
               />
               <motion.div
                 animate={{
@@ -363,7 +367,7 @@ export default function HomePage() {
                   repeatType: "reverse",
                   delay: 1,
                 }}
-                className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#00CC66]/20 rounded-full blur-2xl"
+                className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#4C4EFB]/20 rounded-full blur-2xl"
               />
 
               <motion.div
@@ -373,8 +377,8 @@ export default function HomePage() {
                 className="absolute top-1/4 -right-12 bg-white rounded-2xl shadow-xl p-4 max-w-[200px] transform rotate-y-[-8deg] hover:rotate-y-0 transition-transform duration-700 animate-float"
               >
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-[#00CC66]/20 flex items-center justify-center">
-                    <Zap className="h-5 w-5 text-[#00CC66]" />
+                  <div className="w-10 h-10 rounded-full bg-[#4C4EFB]/20 flex items-center justify-center">
+                    <Zap className="h-5 w-5 text-[#4C4EFB]" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-[#003366]">Instant Approval</p>
@@ -402,7 +406,7 @@ export default function HomePage() {
             </motion.div>
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#003366] to-transparent"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#070806] to-transparent"></div>
         </div>
       </section>
 
@@ -446,12 +450,12 @@ export default function HomePage() {
             className="flex flex-col items-center text-center space-y-4 mb-16"
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#003366]/10 dark:bg-[#003366]/30 text-[#003366] dark:text-white text-sm font-medium">
-              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#00CC66] mr-2"></span>
+              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#4C4EFB] mr-2"></span>
               Our Mission
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#003366] dark:text-white max-w-3xl">
               Revolutionizing Access to{" "}
-              <span className="relative inline-block">
+              <span className="relative inline-block text-[#4C4EFB]">
                 Financial Services
                 <motion.svg
                   initial={{ pathLength: 0 }}
@@ -463,7 +467,7 @@ export default function HomePage() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M2 10C45.6667 4 158.4 -4.8 356 10" stroke="#00CC66" strokeWidth="3" strokeLinecap="round" />
+                  <path d="M2 10C45.6667 4 158.4 -4.8 356 10" stroke="#FFC000" strokeWidth="3" strokeLinecap="round" />
                 </motion.svg>
               </span>
             </h2>
@@ -479,7 +483,7 @@ export default function HomePage() {
                 icon: <Zap className="h-10 w-10 text-white" />,
                 title: "Digital Loans",
                 description: "Low-interest loans backed by stablecoins with AI-powered credit scoring.",
-                iconBg: "bg-gradient-to-br from-[#00CC66] to-[#00AA44]",
+                iconBg: "bg-gradient-to-br from-[#4C4EFB] to-[#00AA44]",
                 delay: 0,
               },
               {
@@ -493,7 +497,7 @@ export default function HomePage() {
                 icon: <BarChart3 className="h-10 w-10 text-white" />,
                 title: "Climate Financing",
                 description: "Investments for climate innovation SMEs and solar irrigation equipment.",
-                iconBg: "bg-gradient-to-br from-[#00CC66] to-[#00AA44]",
+                iconBg: "bg-gradient-to-br from-[#4C4EFB] to-[#00AA44]",
                 delay: 0.4,
               },
             ].map((feature, index) => (
@@ -521,7 +525,7 @@ export default function HomePage() {
 
       {/* Virtual Card Section */}
       <section className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#00CC66]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
@@ -533,11 +537,11 @@ export default function HomePage() {
             className="flex flex-col items-center text-center space-y-4 mb-16"
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#003366]/10 dark:bg-[#003366]/30 text-[#003366] dark:text-white text-sm font-medium">
-              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#00CC66] mr-2"></span>
+              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#4C4EFB] mr-2"></span>
               New Feature
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#003366] dark:text-white max-w-3xl">
-              Virtual <span className="text-[#00CC66]">Financial Card</span>
+              Virtual <span className="text-[#4C4EFB]">Financial Card</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-[800px] md:text-lg mt-4">
               Manage your finances with our secure virtual card, designed for both online and offline transactions.
@@ -562,8 +566,8 @@ export default function HomePage() {
             >
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#00CC66]/10 flex items-center justify-center mr-4 mt-1">
-                    <Shield className="h-6 w-6 text-[#00CC66]" />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#4C4EFB]/10 flex items-center justify-center mr-4 mt-1">
+                    <Shield className="h-6 w-6 text-[#4C4EFB]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-[#003366] dark:text-white mb-2">Enhanced Security</h3>
@@ -574,8 +578,8 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#00CC66]/10 flex items-center justify-center mr-4 mt-1">
-                    <Wallet className="h-6 w-6 text-[#00CC66]" />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#4C4EFB]/10 flex items-center justify-center mr-4 mt-1">
+                    <Wallet className="h-6 w-6 text-[#4C4EFB]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-[#003366] dark:text-white mb-2">Instant Transactions</h3>
@@ -586,8 +590,8 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#00CC66]/10 flex items-center justify-center mr-4 mt-1">
-                    <PieChart className="h-6 w-6 text-[#00CC66]" />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#4C4EFB]/10 flex items-center justify-center mr-4 mt-1">
+                    <PieChart className="h-6 w-6 text-[#4C4EFB]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-[#003366] dark:text-white mb-2">Spending Analytics</h3>
@@ -598,8 +602,8 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#00CC66]/10 flex items-center justify-center mr-4 mt-1">
-                    <TrendingUp className="h-6 w-6 text-[#00CC66]" />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#4C4EFB]/10 flex items-center justify-center mr-4 mt-1">
+                    <TrendingUp className="h-6 w-6 text-[#4C4EFB]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-[#003366] dark:text-white mb-2">Rewards Program</h3>
@@ -627,7 +631,7 @@ export default function HomePage() {
 
       {/* Team Section */}
       <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#00CC66]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
@@ -639,11 +643,11 @@ export default function HomePage() {
             className="flex flex-col items-center text-center space-y-4 mb-16"
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#003366]/10 dark:bg-[#003366]/30 text-[#003366] dark:text-white text-sm font-medium">
-              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#00CC66] mr-2"></span>
+              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#4C4EFB] mr-2"></span>
               Our Leadership
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#003366] dark:text-white max-w-3xl">
-              Meet the <span className="text-[#00CC66]">Experts</span> Behind Pollen AI
+              Meet the <span className="text-[#4C4EFB]">Experts</span> Behind Pollen AI
             </h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-[800px] md:text-lg mt-4">
               Our diverse team combines expertise in AI, blockchain, finance, and sustainable development to drive our
@@ -671,7 +675,7 @@ export default function HomePage() {
               repeat: Number.POSITIVE_INFINITY,
               repeatType: "reverse",
             }}
-            className="absolute -top-[40%] -right-[10%] w-[70%] h-[140%] bg-[#00CC66]/10 rounded-full blur-3xl"
+            className="absolute -top-[40%] -right-[10%] w-[70%] h-[140%] bg-[#4C4EFB]/10 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -684,7 +688,7 @@ export default function HomePage() {
               repeatType: "reverse",
               delay: 1,
             }}
-            className="absolute -bottom-[40%] -left-[10%] w-[70%] h-[140%] bg-[#00CC66]/10 rounded-full blur-3xl"
+            className="absolute -bottom-[40%] -left-[10%] w-[70%] h-[140%] bg-[#4C4EFB]/10 rounded-full blur-3xl"
           />
           <div className="absolute inset-0 bg-grid-white/[0.05] bg-grid-8"></div>
         </div>
@@ -698,7 +702,7 @@ export default function HomePage() {
             className="flex flex-col items-center text-center space-y-4 mb-16"
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm font-medium">
-              <span className="flex h-2 w-2 rounded-full bg-[#00CC66] mr-2"></span>
+              <span className="flex h-2 w-2 rounded-full bg-[#4C4EFB] mr-2"></span>
               The Challenge
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-white max-w-3xl">
@@ -715,7 +719,7 @@ export default function HomePage() {
                 value: 70,
                 suffix: "%",
                 label: "of Zambians lack access to financial services",
-                color: "bg-gradient-to-br from-[#00CC66] to-[#00AA44]",
+                color: "bg-gradient-to-br from-[#4C4EFB] to-[#00AA44]",
                 delay: 0,
               },
               {
@@ -729,7 +733,7 @@ export default function HomePage() {
                 value: 80,
                 suffix: "%",
                 label: "of small businesses can't access needed financing",
-                color: "bg-gradient-to-br from-[#00CC66] to-[#00AA44]",
+                color: "bg-gradient-to-br from-[#4C4EFB] to-[#00AA44]",
                 delay: 0.4,
               },
               {
@@ -776,17 +780,17 @@ export default function HomePage() {
                   <ChartTitle className="text-white/90">Financial Inclusion Rate (%)</ChartTitle>
                   <ChartLegend className="text-white/90">
                     <ChartLegendItem name="traditional" className="text-white/70" />
-                    <ChartLegendItem name="pollenai" className="text-[#00CC66]" />
+                    <ChartLegendItem name="pollenai" className="text-[#4C4EFB]" />
                   </ChartLegend>
                   <Chart>
                     <ChartGrid className="stroke-white/10" />
                     <ChartArea dataKey="traditional" className="fill-white/10" />
                     <ChartLine dataKey="traditional" className="stroke-white/70" />
-                    <ChartArea dataKey="pollenai" className="fill-[#00CC66]/20" />
-                    <ChartLine dataKey="pollenai" className="stroke-[#00CC66]" />
+                    <ChartArea dataKey="pollenai" className="fill-[#4C4EFB]/20" />
+                    <ChartLine dataKey="pollenai" className="stroke-[#4C4EFB]" />
                     <ChartTooltip>
                       {({ dataPoint }) => (
-                        <ChartTooltipContent className="bg-[#003366] border-[#00CC66]">
+                        <ChartTooltipContent className="bg-[#003366] border-[#4C4EFB]">
                           <div className="flex flex-col gap-1">
                             <div className="flex items-center gap-2">
                               <div className="h-1.5 w-1.5 rounded-full bg-white/70" />
@@ -795,8 +799,8 @@ export default function HomePage() {
                               </span>
                             </div>
                             <div className="flex items-center gap-2">
-                              <div className="h-1.5 w-1.5 rounded-full bg-[#00CC66]" />
-                              <span className="text-xs font-medium text-[#00CC66]">
+                              <div className="h-1.5 w-1.5 rounded-full bg-[#4C4EFB]" />
+                              <span className="text-xs font-medium text-[#4C4EFB]">
                                 Pollen AI: {dataPoint.pollenai || 0}%
                               </span>
                             </div>
@@ -814,7 +818,7 @@ export default function HomePage() {
 
       {/* Currency Converter Section */}
       <section id="currency-converter" className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#00CC66]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
@@ -826,11 +830,11 @@ export default function HomePage() {
             className="flex flex-col items-center text-center space-y-4 mb-16"
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#003366]/10 dark:bg-[#003366]/30 text-[#003366] dark:text-white text-sm font-medium">
-              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#00CC66] mr-2"></span>
+              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#4C4EFB] mr-2"></span>
               Global Transfers
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#003366] dark:text-white max-w-3xl">
-              Currency <span className="text-[#00CC66]">Converter</span>
+              Currency <span className="text-[#4C4EFB]">Converter</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-[800px] md:text-lg mt-4">
               Send money internationally with competitive exchange rates and minimal fees.
@@ -851,7 +855,7 @@ export default function HomePage() {
 
       {/* Goal Tracker Section */}
       <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#00CC66]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
@@ -863,11 +867,11 @@ export default function HomePage() {
             className="flex flex-col items-center text-center space-y-4 mb-16"
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#003366]/10 dark:bg-[#003366]/30 text-[#003366] dark:text-white text-sm font-medium">
-              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#00CC66] mr-2"></span>
+              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#4C4EFB] mr-2"></span>
               Financial Planning
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#003366] dark:text-white max-w-3xl">
-              Track Your <span className="text-[#00CC66]">Financial Goals</span>
+              Track Your <span className="text-[#4C4EFB]">Financial Goals</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-[800px] md:text-lg mt-4">
               Set savings goals and track your progress with our interactive goal tracker.
@@ -888,7 +892,7 @@ export default function HomePage() {
 
       {/* Loan Calculator Section */}
       <section id="loan-calculator" className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#00CC66]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
@@ -900,11 +904,11 @@ export default function HomePage() {
             className="flex flex-col items-center text-center space-y-4 mb-16"
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#003366]/10 dark:bg-[#003366]/30 text-[#003366] dark:text-white text-sm font-medium">
-              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#00CC66] mr-2"></span>
+              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#4C4EFB] mr-2"></span>
               Try It Yourself
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#003366] dark:text-white max-w-3xl">
-              Calculate Your <span className="text-[#00CC66]">Potential Savings</span>
+              Calculate Your <span className="text-[#4C4EFB]">Potential Savings</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-[800px] md:text-lg mt-4">
               See how much you could save with our competitive rates compared to traditional financial services.
@@ -948,7 +952,7 @@ export default function HomePage() {
                             max="10000"
                             step="100"
                             defaultValue="1000"
-                            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-[#00CC66]"
+                            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-[#4C4EFB]"
                           />
                           <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
                             <span>$100</span>
@@ -966,7 +970,7 @@ export default function HomePage() {
                             max="1000"
                             step="10"
                             defaultValue="100"
-                            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-[#00CC66]"
+                            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-[#4C4EFB]"
                           />
                           <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
                             <span>$0</span>
@@ -984,7 +988,7 @@ export default function HomePage() {
                             max="20"
                             step="1"
                             defaultValue="5"
-                            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-[#00CC66]"
+                            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-[#4C4EFB]"
                           />
                           <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
                             <span>1 year</span>
@@ -1039,7 +1043,7 @@ export default function HomePage() {
                           <Chart>
                             <ChartGrid className="stroke-gray-200 dark:stroke-gray-700" />
                             <ChartLine dataKey="traditional" className="stroke-gray-400" />
-                            <ChartLine dataKey="pollenai" className="stroke-[#00CC66]" />
+                            <ChartLine dataKey="pollenai" className="stroke-[#4C4EFB]" />
                             <ChartTooltip>
                               {({ dataPoint }) => (
                                 <ChartTooltipContent>
@@ -1051,7 +1055,7 @@ export default function HomePage() {
                                       </span>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                      <div className="h-1.5 w-1.5 rounded-full bg-[#00CC66]" />
+                                      <div className="h-1.5 w-1.5 rounded-full bg-[#4C4EFB]" />
                                       <span className="text-xs font-medium">
                                         Pollen AI: ${(dataPoint.pollenai || 0).toFixed(2)}
                                       </span>
@@ -1070,9 +1074,9 @@ export default function HomePage() {
                           <p className="text-2xl font-bold text-gray-700 dark:text-gray-300">$1,750</p>
                           <p className="text-xs text-gray-500 dark:text-gray-400">After 5 years</p>
                         </div>
-                        <div className="bg-[#00CC66]/10 dark:bg-[#00CC66]/20 p-4 rounded-lg">
+                        <div className="bg-[#4C4EFB]/10 dark:bg-[#4C4EFB]/20 p-4 rounded-lg">
                           <p className="text-sm text-gray-500 dark:text-gray-400">Pollen AI</p>
-                          <p className="text-2xl font-bold text-[#00CC66]">$3,250</p>
+                          <p className="text-2xl font-bold text-[#4C4EFB]">$3,250</p>
                           <p className="text-xs text-gray-500 dark:text-gray-400">After 5 years</p>
                         </div>
                       </div>
@@ -1080,7 +1084,7 @@ export default function HomePage() {
                       <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
                         <div className="flex items-center justify-between">
                           <p className="text-sm font-medium text-gray-700 dark:text-gray-300">Your Advantage</p>
-                          <p className="text-lg font-bold text-[#00CC66]">+$1,500 (85.7%)</p>
+                          <p className="text-lg font-bold text-[#4C4EFB]">+$1,500 (85.7%)</p>
                         </div>
                       </div>
                     </div>
@@ -1094,7 +1098,7 @@ export default function HomePage() {
 
       {/* AI Chatbot Section */}
       <section id="ai-assistant" className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#00CC66]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
@@ -1148,7 +1152,7 @@ export default function HomePage() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.5 }}
-                        className="bg-[#00CC66]/10 dark:bg-[#00CC66]/20 rounded-lg p-3 max-w-[80%]"
+                        className="bg-[#4C4EFB]/10 dark:bg-[#4C4EFB]/20 rounded-lg p-3 max-w-[80%]"
                       >
                         <p className="text-gray-800 dark:text-gray-200">
                           I'm interested in getting a loan for my small business.
@@ -1181,7 +1185,7 @@ export default function HomePage() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.5, duration: 0.5 }}
-                        className="bg-[#00CC66]/10 dark:bg-[#00CC66]/20 rounded-lg p-3 max-w-[80%]"
+                        className="bg-[#4C4EFB]/10 dark:bg-[#4C4EFB]/20 rounded-lg p-3 max-w-[80%]"
                       >
                         <p className="text-gray-800 dark:text-gray-200">
                           I run a small tailoring shop and need about $5,000 to buy new equipment.
@@ -1222,7 +1226,7 @@ export default function HomePage() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 2.5, duration: 0.5 }}
-                        className="bg-[#00CC66]/10 dark:bg-[#00CC66]/20 rounded-lg p-3 max-w-[80%]"
+                        className="bg-[#4C4EFB]/10 dark:bg-[#4C4EFB]/20 rounded-lg p-3 max-w-[80%]"
                       >
                         <p className="text-gray-800 dark:text-gray-200">
                           Yes, that sounds great! How long will the application process take?
@@ -1260,9 +1264,9 @@ export default function HomePage() {
                       <input
                         type="text"
                         placeholder="Type your message..."
-                        className="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-[#00CC66] focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+                        className="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-[#4C4EFB] focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                       />
-                      <button className="bg-[#00CC66] text-white p-2 rounded-r-lg">
+                      <button className="bg-[#4C4EFB] text-white p-2 rounded-r-lg">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-5 w-5"
@@ -1290,7 +1294,7 @@ export default function HomePage() {
                     repeat: Number.POSITIVE_INFINITY,
                     repeatType: "reverse",
                   }}
-                  className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#00CC66]/20 rounded-full blur-2xl -z-10"
+                  className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#4C4EFB]/20 rounded-full blur-2xl -z-10"
                 />
                 <motion.div
                   animate={{
@@ -1316,11 +1320,11 @@ export default function HomePage() {
               className="order-1 lg:order-2"
             >
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#003366]/10 dark:bg-[#003366]/30 text-[#003366] dark:text-white text-sm font-medium mb-6">
-                <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#00CC66] mr-2"></span>
+                <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#4C4EFB] mr-2"></span>
                 24/7 Support
               </div>
               <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#003366] dark:text-white mb-6">
-                AI-Powered <span className="text-[#00CC66]">Financial Assistant</span>
+                AI-Powered <span className="text-[#4C4EFB]">Financial Assistant</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg">
                 Get instant answers to your financial questions and personalized guidance from our AI assistant.
@@ -1334,10 +1338,10 @@ export default function HomePage() {
                   transition={{ delay: 0.4, duration: 0.6 }}
                   className="flex items-start"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#00CC66]/10 flex items-center justify-center mr-4 mt-1">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#4C4EFB]/10 flex items-center justify-center mr-4 mt-1">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-[#00CC66]"
+                      className="h-6 w-6 text-[#4C4EFB]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -1365,10 +1369,10 @@ export default function HomePage() {
                   transition={{ delay: 0.6, duration: 0.6 }}
                   className="flex items-start"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#00CC66]/10 flex items-center justify-center mr-4 mt-1">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#4C4EFB]/10 flex items-center justify-center mr-4 mt-1">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-[#00CC66]"
+                      className="h-6 w-6 text-[#4C4EFB]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -1396,10 +1400,10 @@ export default function HomePage() {
                   transition={{ delay: 0.8, duration: 0.6 }}
                   className="flex items-start"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#00CC66]/10 flex items-center justify-center mr-4 mt-1">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#4C4EFB]/10 flex items-center justify-center mr-4 mt-1">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-[#00CC66]"
+                      className="h-6 w-6 text-[#4C4EFB]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -1433,7 +1437,7 @@ export default function HomePage() {
                     <TooltipTrigger asChild>
                       <Button
                         size="lg"
-                        className="bg-[#00CC66] hover:bg-[#00BB55] text-white rounded-full group transition-all duration-300 transform hover:translate-y-[-2px] shadow-lg hover:shadow-[#00CC66]/20"
+                        className="bg-[#4C4EFB] hover:bg-[#00BB55] text-white rounded-full group transition-all duration-300 transform hover:translate-y-[-2px] shadow-lg hover:shadow-[#4C4EFB]/20"
                       >
                         Chat with Our Assistant
                         <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -1452,7 +1456,7 @@ export default function HomePage() {
 
       {/* Transaction History Section */}
       <section className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#00CC66]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
@@ -1464,11 +1468,11 @@ export default function HomePage() {
             className="flex flex-col items-center text-center space-y-4 mb-16"
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#003366]/10 dark:bg-[#003366]/30 text-[#003366] dark:text-white text-sm font-medium">
-              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#00CC66] mr-2"></span>
+              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#4C4EFB] mr-2"></span>
               Transaction Tracking
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#003366] dark:text-white max-w-3xl">
-              Monitor Your <span className="text-[#00CC66]">Financial Activity</span>
+              Monitor Your <span className="text-[#4C4EFB]">Financial Activity</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-[800px] md:text-lg mt-4">
               Keep track of your income and expenses with our comprehensive transaction history tool.
@@ -1489,7 +1493,7 @@ export default function HomePage() {
 
       {/* Financial Health Score Section */}
       <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#00CC66]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
@@ -1501,11 +1505,11 @@ export default function HomePage() {
             className="flex flex-col items-center text-center space-y-4 mb-16"
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#003366]/10 dark:bg-[#003366]/30 text-[#003366] dark:text-white text-sm font-medium">
-              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#00CC66] mr-2"></span>
+              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#4C4EFB] mr-2"></span>
               Financial Wellness
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#003366] dark:text-white max-w-3xl">
-              Understand Your <span className="text-[#00CC66]">Financial Health</span>
+              Understand Your <span className="text-[#4C4EFB]">Financial Health</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-[800px] md:text-lg mt-4">
               Get a comprehensive assessment of your financial wellbeing with personalized recommendations.
@@ -1526,7 +1530,7 @@ export default function HomePage() {
 
       {/* Budget Planner Section */}
       <section className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#00CC66]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
@@ -1538,11 +1542,11 @@ export default function HomePage() {
             className="flex flex-col items-center text-center space-y-4 mb-16"
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#003366]/10 dark:bg-[#003366]/30 text-[#003366] dark:text-white text-sm font-medium">
-              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#00CC66] mr-2"></span>
+              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#4C4EFB] mr-2"></span>
               Budget Management
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#003366] dark:text-white max-w-3xl">
-              Plan and Track Your <span className="text-[#00CC66]">Budget</span>
+              Plan and Track Your <span className="text-[#4C4EFB]">Budget</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-[800px] md:text-lg mt-4">
               Create and manage your budget with our intuitive planning tool to achieve your financial goals.
@@ -1563,7 +1567,7 @@ export default function HomePage() {
 
       {/* Blog Section */}
       <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#00CC66]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
@@ -1575,11 +1579,11 @@ export default function HomePage() {
             className="flex flex-col items-center text-center space-y-4 mb-16"
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#003366]/10 dark:bg-[#003366]/30 text-[#003366] dark:text-white text-sm font-medium">
-              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#00CC66] mr-2"></span>
+              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#4C4EFB] mr-2"></span>
               Resources & Insights
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#003366] dark:text-white max-w-3xl">
-              Latest <span className="text-[#00CC66]">Articles & News</span>
+              Latest <span className="text-[#4C4EFB]">Articles & News</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-[800px] md:text-lg mt-4">
               Stay informed with our latest insights on financial inclusion, blockchain technology, and sustainable
@@ -1604,7 +1608,7 @@ export default function HomePage() {
               repeat: Number.POSITIVE_INFINITY,
               repeatType: "reverse",
             }}
-            className="absolute -top-[40%] -right-[10%] w-[70%] h-[140%] bg-[#00CC66]/10 rounded-full blur-3xl"
+            className="absolute -top-[40%] -right-[10%] w-[70%] h-[140%] bg-[#4C4EFB]/10 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -1617,7 +1621,7 @@ export default function HomePage() {
               repeatType: "reverse",
               delay: 1,
             }}
-            className="absolute -bottom-[40%] -left-[10%] w-[70%] h-[140%] bg-[#00CC66]/10 rounded-full blur-3xl"
+            className="absolute -bottom-[40%] -left-[10%] w-[70%] h-[140%] bg-[#4C4EFB]/10 rounded-full blur-3xl"
           />
           <div className="absolute inset-0 bg-grid-white/[0.05] bg-grid-8"></div>
         </div>
@@ -1639,7 +1643,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button
                 size="lg"
-                className="bg-[#00CC66] hover:bg-[#00BB55] text-white rounded-full group transition-all duration-300 transform hover:translate-y-[-2px] shadow-lg hover:shadow-[#00CC66]/20"
+                className="bg-[#4C4EFB] hover:bg-[#00BB55] text-white rounded-full group transition-all duration-300 transform hover:translate-y-[-2px] shadow-lg hover:shadow-[#4C4EFB]/20"
               >
                 Get Started Today
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

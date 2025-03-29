@@ -106,7 +106,7 @@ export default function Navbar() {
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="center" className="w-48">
+              {/* <DropdownMenuContent align="center" className="w-48">
                 <DropdownMenuItem asChild>
                   <Link href="/services/digital-loans" className="cursor-pointer">
                     Digital Loans
@@ -127,7 +127,7 @@ export default function Navbar() {
                     AI Credit Scoring
                   </Link>
                 </DropdownMenuItem>
-              </DropdownMenuContent>
+              </DropdownMenuContent> */}
             </DropdownMenu>
 
             <Link
