@@ -494,7 +494,7 @@ export default function AboutPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* <section className="py-16 md:py-24 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tighter text-[#003366]">What People Say About Us</h2>
@@ -571,7 +571,7 @@ export default function AboutPage() {
             </div>
           </Carousel>
         </div>
-      </section>
+      </section> */}
 
       {/* Awards and Recognition Section */}
       <section className="py-16 md:py-24 bg-gray-50">

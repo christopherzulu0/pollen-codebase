@@ -86,9 +86,9 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen" >
       {/* Notification */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showNotification && (
           <motion.div
             initial={{ y: -100, opacity: 0 }}
@@ -142,10 +142,10 @@ export default function HomePage() {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       {/* Floating Action Button */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showFab && (
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
@@ -198,7 +198,7 @@ export default function HomePage() {
             </Popover>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       {/* Hero Section */}
       {/**
@@ -375,7 +375,7 @@ export default function HomePage() {
                 className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#4C4EFB]/20 rounded-full blur-2xl"
               />
 
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, duration: 0.8 }}
@@ -407,7 +407,7 @@ export default function HomePage() {
                     <p className="text-xs text-gray-500">Blockchain protected</p>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
           </div>
 
@@ -750,7 +750,7 @@ export default function HomePage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+      {/* <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
@@ -777,7 +777,7 @@ export default function HomePage() {
 
           <TeamSection />
         </div>
-      </section>
+      </section> */}
 
       {/* Statistics Section */}
 

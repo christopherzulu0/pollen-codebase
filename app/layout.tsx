@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Pollen AI - Empowering Financial Inclusion",
   description:
     "Pollen AI combines artificial intelligence and blockchain technology to create innovative financial solutions for underserved communities.",
-    generator: 'v0.dev'
+    
 }
 
 export default function RootLayout({
@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="en"  className="dark" suppressHydrationWarning>
+      <body className={`${inter.className} bg-gray-900 text-white`}>
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-1">{children}</main>

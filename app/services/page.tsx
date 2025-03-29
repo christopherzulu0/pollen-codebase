@@ -1093,7 +1093,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900">
+      {/* <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900">
         <div className="container px-4 md:px-6 mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1198,7 +1198,7 @@ export default function ServicesPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Enhanced FAQ Section */}
       <section className="py-16 md:py-24 bg-white dark:bg-gray-950">
