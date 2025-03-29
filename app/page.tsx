@@ -644,7 +644,7 @@ export default function HomePage() {
       <StatisticsSection />
 
       {/* Virtual Card Section */}
-      <section className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
+      {/* <section className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
@@ -747,7 +747,7 @@ export default function HomePage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Team Section */}
       {/* <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
