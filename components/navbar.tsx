@@ -6,10 +6,14 @@ import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ThemeToggle from "@/components/theme-toggle"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { useRouter } from "next/navigation"
+
+
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const router = useRouter()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -61,9 +65,8 @@ export default function Navbar() {
               Home
             </Link>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
                 <button
+                onClick={()=>router.push('/about')}
                   className={`px-4 py-2 rounded-full text-sm font-medium flex items-center ${
                     isScrolled
                       ? "text-gray-700 dark:text-gray-300 hover:text-[#003366] dark:hover:text-white"
@@ -71,31 +74,14 @@ export default function Navbar() {
                   } transition-colors`}
                 >
                   About
-                  <ChevronDown className="ml-1 h-4 w-4" />
+                  {/* <ChevronDown className="ml-1 h-4 w-4" /> */}
                 </button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="center" className="w-48">
-                <DropdownMenuItem asChild>
-                  <Link href="/about" className="cursor-pointer">
-                    Our Mission
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/about#team" className="cursor-pointer">
-                    Our Team
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/about#values" className="cursor-pointer">
-                    Our Values
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
+            {/* <DropdownMenu>
+              <DropdownMenuTrigger asChild> */}
                 <button
+                onClick={() => router.push('/services')}
                   className={`px-4 py-2 rounded-full text-sm font-medium flex items-center ${
                     isScrolled
                       ? "text-gray-700 dark:text-gray-300 hover:text-[#003366] dark:hover:text-white"
@@ -103,9 +89,9 @@ export default function Navbar() {
                   } transition-colors`}
                 >
                   Services
-                  <ChevronDown className="ml-1 h-4 w-4" />
+                  {/* <ChevronDown className="ml-1 h-4 w-4" /> */}
                 </button>
-              </DropdownMenuTrigger>
+              {/* </DropdownMenuTrigger> */}
               {/* <DropdownMenuContent align="center" className="w-48">
                 <DropdownMenuItem asChild>
                   <Link href="/services/digital-loans" className="cursor-pointer">
@@ -128,9 +114,9 @@ export default function Navbar() {
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent> */}
-            </DropdownMenu>
+            {/* </DropdownMenu> */}
 
-            <Link
+            {/* <Link
               href="/innovations"
               className={`px-4 py-2 rounded-full text-sm font-medium ${
                 isScrolled
@@ -150,7 +136,7 @@ export default function Navbar() {
               } transition-colors`}
             >
               Testimonials
-            </Link>
+            </Link> */}
 
             <Link
               href="/blog"

@@ -332,7 +332,7 @@ export default function AboutPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#00CC66]">
-                <h3 className="text-xl font-semibold text-[#003366] mb-4">Traditional Banking Limitations</h3>
+                <h3 className="text-xl font-semibold text-[#003366] mb-4">Conventional Banking Limitation</h3>
                 <p className="text-gray-600">
                   Traditional banking systems often fail to serve those without formal employment, credit history, or
                   collateral. This creates a cycle of exclusion that disproportionately affects rural communities,
@@ -341,12 +341,15 @@ export default function AboutPage() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#00CC66]">
-                <h3 className="text-xl font-semibold text-[#003366] mb-4">Climate Change Impact</h3>
-                <p className="text-gray-600">
-                  Climate change further compounds these challenges, particularly for agricultural communities that
-                  depend on predictable weather patterns for their livelihoods, creating an urgent need for
-                  climate-resilient financial solutions.
+                <h3 className="text-xl font-semibold text-[#003366] mb-4">Shortfalls of Existing Banking Services</h3>
+                <p className="text-gray-600 mb-4">
+                  Many banks in Zambia still rely on traditional banking models that require physical presence, extensive paperwork, and formal identification. This excludes individuals without proper documentation, such as rural farmers and youth.
                 </p>
+                <ul className="text-gray-600 space-y-2 list-disc pl-5">
+                  <li className="text-gray-600">Women often lack access to credit due to limited collateral, as property ownership is predominantly male-dominated.</li>
+                  <li className="text-gray-600">Youths face challenges in obtaining loans due to insufficient credit history or lack of employment stability.</li>
+                  <li className="text-gray-600">Farmers struggle with seasonal income cycles, yet banks rarely offer flexible repayment terms or agricultural-specific loans.</li>
+                </ul>
               </div>
             </div>
 
@@ -402,7 +405,7 @@ export default function AboutPage() {
       </section>
 
       {/* Enhanced Team Section */}
-      <TeamSection />
+      {/* <TeamSection /> */}
 
       {/* Enhanced Values Section with Animations */}
       <section className="py-16 md:py-24 bg-gray-50">
@@ -469,16 +472,16 @@ export default function AboutPage() {
                   <div className="flex justify-center mb-4 transform group-hover:scale-110 transition-transform duration-300">
                     {value.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-[#003366] mb-3">{value.title}</h3>
-                  <p className="text-gray-600 mb-4">{value.description}</p>
+                  <h3 className="text-xl font-bold text-[#4C4EFB] mb-3">{value.title}</h3>
+                  <p className="text-white mb-4">{value.description}</p>
 
                   <div className="bg-[#003366]/5 p-4 rounded-lg mt-4 text-left opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[200px] transition-all duration-500">
-                    <h4 className="font-semibold text-[#003366] mb-2 text-sm">How We Apply This:</h4>
+                    <h4 className="font-semibold text-[#4C4EFB] mb-2 text-sm">How We Apply This:</h4>
                     <ul className="space-y-1">
                       {value.examples.map((example, i) => (
                         <li key={i} className="flex items-start">
                           <span className="text-[#00CC66] mr-2 text-xs">•</span>
-                          <span className="text-gray-600 text-sm">{example}</span>
+                          <span className="text-white text-sm">{example}</span>
                         </li>
                       ))}
                     </ul>
@@ -541,7 +544,7 @@ export default function AboutPage() {
                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                           </svg>
                         </div>
-                        <p className="text-gray-600 italic mb-6 flex-grow">{testimonial.quote}</p>
+                        <p className="text-white italic mb-6 flex-grow">{testimonial.quote}</p>
                         <div className="flex items-center mt-auto">
                           <div className="relative h-12 w-12 rounded-full overflow-hidden mr-4">
                             <Image
@@ -552,8 +555,8 @@ export default function AboutPage() {
                             />
                           </div>
                           <div>
-                            <h4 className="font-bold text-[#003366]">{testimonial.name}</h4>
-                            <p className="text-sm text-gray-500">{testimonial.role}</p>
+                            <h4 className="font-bold text-[#4C4EFB]">{testimonial.name}</h4>
+                            <p className="text-sm text-[#FFC000]">{testimonial.role}</p>
                           </div>
                         </div>
                       </CardContent>
@@ -624,9 +627,9 @@ export default function AboutPage() {
                   <div className="flex items-start">
                     <div className="bg-[#00CC66]/10 p-3 rounded-full mr-4">{item.icon}</div>
                     <div>
-                      <h3 className="font-bold text-[#003366] text-lg">{item.award}</h3>
+                      <h3 className="font-bold text-[#4C4EFB] text-lg">{item.award}</h3>
                       <p className="text-[#00CC66] font-medium">{item.year}</p>
-                      <p className="text-gray-600 mt-1">{item.organization}</p>
+                      <p className="text-white mt-1">{item.organization}</p>
                     </div>
                   </div>
                 </CardContent>

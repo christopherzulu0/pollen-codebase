@@ -17,6 +17,11 @@ import {
   TrendingUp,
   Globe,
   MessageSquare,
+  MapPin,
+  DollarSign,
+  FileText,
+  Wifi,
+  BookOpen,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -519,6 +524,121 @@ export default function HomePage() {
           </div>
         </div>
       </ParallaxSection>
+
+      {/* Shortfalls Section */}
+      <section className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
+
+        <div className="container px-4 md:px-6 mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-center text-center space-y-4 mb-16"
+          >
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#003366]/10 dark:bg-[#003366]/30 text-[#003366] dark:text-white text-sm font-medium">
+              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#4C4EFB] mr-2"></span>
+              Current Challenges
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#003366] dark:text-white max-w-3xl">
+              Shortfalls of Existing <span className="text-[#4C4EFB]">Banking Services</span>
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 max-w-[800px] md:text-lg mt-4">
+              Understanding the limitations of traditional banking services in Zambia
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Limited Physical Access",
+                description: "Many rural areas lack physical bank branches, making it difficult for residents to access basic banking services.",
+                icon: <MapPin className="h-6 w-6 text-[#4C4EFB]" />,
+                listItems: [
+                  "Remote locations without bank branches",
+                  "Long travel distances to nearest bank",
+                  "Limited banking hours in rural areas"
+                ]
+              },
+              {
+                title: "High Transaction Costs",
+                description: "Traditional banks often charge high fees for basic transactions, making banking unaffordable for many.",
+                icon: <DollarSign className="h-6 w-6 text-[#4C4EFB]" />,
+                listItems: [
+                  "High account maintenance fees",
+                  "Expensive transfer charges",
+                  "Minimum balance requirements"
+                ]
+              },
+              {
+                title: "Stringent Requirements",
+                description: "Complex documentation and strict eligibility criteria prevent many from opening accounts.",
+                icon: <FileText className="h-6 w-6 text-[#4C4EFB]" />,
+                listItems: [
+                  "Complex KYC procedures",
+                  "Multiple document requirements",
+                  "Strict eligibility criteria"
+                ]
+              },
+              {
+                title: "Limited Credit Access",
+                description: "Small businesses and individuals struggle to access credit due to traditional credit scoring methods.",
+                icon: <CreditCard className="h-6 w-6 text-[#4C4EFB]" />,
+                listItems: [
+                  "Traditional credit scoring limitations",
+                  "High interest rates",
+                  "Collateral requirements"
+                ]
+              },
+              {
+                title: "Poor Digital Infrastructure",
+                description: "Insufficient digital banking infrastructure limits access to online financial services.",
+                icon: <Wifi className="h-6 w-6 text-[#4C4EFB]" />,
+                listItems: [
+                  "Limited internet connectivity",
+                  "Unreliable mobile networks",
+                  "Basic digital literacy challenges"
+                ]
+              },
+              {
+                title: "Financial Literacy Gap",
+                description: "Limited financial education prevents many from understanding and utilizing banking services effectively.",
+                icon: <BookOpen className="h-6 w-6 text-[#4C4EFB]" />,
+                listItems: [
+                  "Lack of financial education",
+                  "Limited understanding of banking services",
+                  "Cultural barriers to banking"
+                ]
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-full bg-[#4C4EFB]/10 flex items-center justify-center mb-4">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-bold text-[#003366] dark:text-white mb-2">{item.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{item.description}</p>
+                <ul className="space-y-2">
+                  {item.listItems.map((listItem, idx) => (
+                    <li key={idx} className="flex items-start text-sm text-gray-600 dark:text-gray-300">
+                      <span className="text-[#4C4EFB] mr-2">•</span>
+                      {listItem}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Statistics Section */}
       <StatisticsSection />
@@ -1571,7 +1691,7 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -1589,7 +1709,7 @@ export default function HomePage() {
               Stay informed with our latest insights on financial inclusion, blockchain technology, and sustainable
               development.
             </p>
-          </motion.div>
+          </motion.div> */}
 
           <BlogSection />
         </div>
