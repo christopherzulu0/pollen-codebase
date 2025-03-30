@@ -14,7 +14,7 @@ export default function Footer() {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Newsletter Section */}
-        <div className="py-16 border-b border-white/10">
+        {/* <div className="py-16 border-b border-white/10">
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Stay Updated</h3>
             <p className="text-white/70 mb-8">
@@ -32,7 +32,7 @@ export default function Footer() {
               </Button>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Main Footer Content */}
         <div className="py-16">

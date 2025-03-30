@@ -382,7 +382,7 @@ export default function BlogSection() {
         )}
 
         {/* Newsletter Subscription */}
-        <div className="mt-16 bg-[#003366] dark:bg-[#002244] text-white rounded-xl p-8 md:p-12 relative overflow-hidden">
+        {/* <div className="mt-16 bg-[#003366] dark:bg-[#002244] text-white rounded-xl p-8 md:p-12 relative overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-[40%] -right-[10%] w-[70%] h-[140%] bg-[#00CC66]/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-[40%] -left-[10%] w-[70%] h-[140%] bg-[#00CC66]/10 rounded-full blur-3xl"></div>
@@ -403,7 +403,7 @@ export default function BlogSection() {
             </div>
             <p className="text-white/60 text-sm mt-4">We respect your privacy. Unsubscribe at any time.</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

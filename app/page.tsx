@@ -416,7 +416,7 @@ export default function HomePage() {
       </section>
 
       {/* Trusted By Section */}
-      <section className="py-12 bg-white dark:bg-gray-900">
+      {/* <section className="py-12 bg-white dark:bg-gray-900">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-8">
             <p className="text-[#003366]/60 dark:text-white/60 font-medium">TRUSTED BY LEADING ORGANIZATIONS</p>
@@ -442,7 +442,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Overview Section */}
       <ParallaxSection className="py-20 md:py-32 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
@@ -462,7 +462,7 @@ export default function HomePage() {
               Revolutionizing Access to{" "}
               <span className="relative inline-block text-[#4C4EFB]">
                 Financial Services
-                <motion.svg
+                {/* <motion.svg
                   initial={{ pathLength: 0 }}
                   whileInView={{ pathLength: 1 }}
                   viewport={{ once: true }}
@@ -473,11 +473,11 @@ export default function HomePage() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M2 10C45.6667 4 158.4 -4.8 356 10" stroke="#FFC000" strokeWidth="3" strokeLinecap="round" />
-                </motion.svg>
+                </motion.svg> */}
               </span>
             </h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-[800px] md:text-lg mt-4">
-              Pollen AI combines artificial intelligence and blockchain technology to create innovative financial
+              Pollen combines artificial intelligence and blockchain technology to create innovative financial
               solutions for the 70% of Zambians who lack access to traditional banking services.
             </p>
           </motion.div>
@@ -500,8 +500,8 @@ export default function HomePage() {
               },
               {
                 icon: <BarChart3 className="h-10 w-10 text-white" />,
-                title: "Climate Financing",
-                description: "Investments for climate innovation SMEs and solar irrigation equipment.",
+                title: "AI Credit Scoring",
+                description: "AI credit scoring uses artificial intelligence and machine learning to assess a borrower's creditworthiness by analyzing financial, behavioral, and alternative data. It enables faster, more accurate, and fairer loan decisions while improving financial inclusion and risk management.",
                 iconBg: "bg-gradient-to-br from-[#4C4EFB] to-[#00AA44]",
                 delay: 0.4,
               },
@@ -641,7 +641,7 @@ export default function HomePage() {
       </section>
 
       {/* Statistics Section */}
-      <StatisticsSection />
+      {/* <StatisticsSection /> */}
 
       {/* Virtual Card Section */}
       {/* <section className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
@@ -782,7 +782,7 @@ export default function HomePage() {
       {/* Statistics Section */}
 
       {/* Statistics Section */}
-      <section className="py-20 md:py-32 relative overflow-hidden">
+      {/* <section className="py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#003366] dark:bg-gray-800">
           <div className="absolute inset-0 bg-grid-white/[0.05] bg-grid-8"></div>
           <motion.div
@@ -934,10 +934,10 @@ export default function HomePage() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Currency Converter Section */}
-      <section id="currency-converter" className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
+      {/* <section id="currency-converter" className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
@@ -971,10 +971,10 @@ export default function HomePage() {
             <CurrencyConverter />
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Goal Tracker Section */}
-      <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+      {/* <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
@@ -1008,10 +1008,10 @@ export default function HomePage() {
             <GoalTracker />
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Loan Calculator Section */}
-      <section id="loan-calculator" className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
+      {/* <section id="loan-calculator" className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
@@ -1214,10 +1214,10 @@ export default function HomePage() {
             </Tabs>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* AI Chatbot Section */}
-      <section id="ai-assistant" className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+      {/* <section id="ai-assistant" className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
@@ -1572,10 +1572,10 @@ export default function HomePage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Transaction History Section */}
-      <section className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
+      {/* <section className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
@@ -1609,10 +1609,10 @@ export default function HomePage() {
             <TransactionHistory />
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Financial Health Score Section */}
-      <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+      {/* <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
@@ -1646,10 +1646,10 @@ export default function HomePage() {
             <FinancialHealthScore />
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Budget Planner Section */}
-      <section className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
+      {/* <section className="py-20 md:py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
@@ -1683,7 +1683,7 @@ export default function HomePage() {
             <BudgetPlanner />
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Blog Section */}
       <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
@@ -1716,7 +1716,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-[#002244] via-[#003366] to-[#004488] relative overflow-hidden">
+      {/* <section className="py-20 md:py-32 bg-gradient-to-br from-[#002244] via-[#003366] to-[#004488] relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             animate={{
@@ -1778,28 +1778,28 @@ export default function HomePage() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }
 
-function StatisticCard({
-  value,
-  suffix,
-  label,
-  color,
-}: { value: number; suffix: string; label: string; color: string }) {
-  return (
-    <Card className="border-none shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105">
-      <div className={`h-2 ${color}`}></div>
-      <CardContent className="p-8">
-        <div className="flex items-baseline mb-2">
-          <AnimatedCounter value={value} className="text-5xl font-bold text-[#003366] dark:text-white" />
-          <span className="text-3xl font-bold text-[#003366] dark:text-white ml-1">{suffix}</span>
-        </div>
-        <p className="text-gray-600 dark:text-gray-300">{label}</p>
-      </CardContent>
-    </Card>
-  )
-}
+// function StatisticCard({
+//   value,
+//   suffix,
+//   label,
+//   color,
+// }: { value: number; suffix: string; label: string; color: string }) {
+//   return (
+//     <Card className="border-none shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105">
+//       <div className={`h-2 ${color}`}></div>
+//       <CardContent className="p-8">
+//         <div className="flex items-baseline mb-2">
+//           <AnimatedCounter value={value} className="text-5xl font-bold text-[#003366] dark:text-white" />
+//           <span className="text-3xl font-bold text-[#003366] dark:text-white ml-1">{suffix}</span>
+//         </div>
+//         <p className="text-gray-600 dark:text-gray-300">{label}</p>
+//       </CardContent>
+//     </Card>
+//   )
+// }
 
