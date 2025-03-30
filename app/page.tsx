@@ -493,15 +493,15 @@ export default function HomePage() {
               },
               {
                 icon: <Shield className="h-10 w-10 text-white" />,
-                title: "Savings Accounts",
-                description: "Interest-earning accounts integrated with decentralized money markets.",
+                title: "Village bank",
+                description: "Decentralised village banking protocols enables users  to pool funds together and conduct peer to peer lending",
                 iconBg: "bg-gradient-to-br from-[#003366] to-[#002244]",
                 delay: 0.2,
               },
               {
                 icon: <BarChart3 className="h-10 w-10 text-white" />,
                 title: "AI Credit Scoring",
-                description: "AI credit scoring uses artificial intelligence and machine learning to assess a borrower's creditworthiness by analyzing financial, behavioral, and alternative data. It enables faster, more accurate, and fairer loan decisions while improving financial inclusion and risk management.",
+                description: "AI powered credit scoring helps to assess a borrower's creditworthiness by analysing financial, behavioural, and alternative data",
                 iconBg: "bg-gradient-to-br from-[#4C4EFB] to-[#00AA44]",
                 delay: 0.4,
               },
