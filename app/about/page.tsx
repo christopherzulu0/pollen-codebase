@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { BarChart3, Users, LineChart, Target, ArrowRight, Calendar, Award, Briefcase, Shield } from "lucide-react"
+import { BarChart3, Users, LineChart, Target, ArrowRight, Calendar, Award, Briefcase, Shield, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import AnimatedCounter from "@/components/animated-counter"
@@ -30,14 +30,14 @@ export default function AboutPage() {
             <p className="text-xl md:text-2xl text-white/80 mb-8 animate-fade-up animate-delay-100">
               Revolutionizing financial inclusion through innovative technology solutions
             </p>
-            <div className="flex flex-wrap justify-center gap-4 animate-fade-up animate-delay-200">
+            {/* <div className="flex flex-wrap justify-center gap-4 animate-fade-up animate-delay-200">
               <Button size="lg" className="bg-[#00CC66] hover:bg-[#00BB55] text-white">
                 Our Mission
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
                 Meet Our Team
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -60,12 +60,12 @@ export default function AboutPage() {
                 >
                   Our Vision
                 </TabsTrigger>
-                <TabsTrigger
+                {/* <TabsTrigger
                   value="story"
                   className="text-base px-6 data-[state=active]:bg-[#003366] data-[state=active]:text-white"
                 >
                   Our Story
-                </TabsTrigger>
+                </TabsTrigger> */}
               </TabsList>
             </div>
 
@@ -108,7 +108,7 @@ export default function AboutPage() {
                       <div>
                         <h3 className="text-lg font-semibold text-[#003366]">Sustainable Impact</h3>
                         <p className="text-gray-600">
-                          Creating solutions that drive long-term economic growth and environmental sustainability.
+                        Creating solutions that drive long-term economic growth and freedom for all.
                         </p>
                       </div>
                     </div>
@@ -156,12 +156,12 @@ export default function AboutPage() {
                           Facilitate $500 million in loans to small businesses and entrepreneurs
                         </span>
                       </li>
-                      <li className="flex items-start">
+                      {/* <li className="flex items-start">
                         <span className="text-[#00CC66] mr-2 font-bold">•</span>
                         <span className="text-gray-600">
                           Support 100,000 farmers with climate-resilient agricultural financing
                         </span>
-                      </li>
+                      </li> */}
                       <li className="flex items-start">
                         <span className="text-[#00CC66] mr-2 font-bold">•</span>
                         <span className="text-gray-600">
@@ -174,16 +174,16 @@ export default function AboutPage() {
               </div>
             </TabsContent>
 
-            <TabsContent value="story" className="mt-0">
+            {/* <TabsContent value="story" className="mt-0">
               <div className="space-y-8">
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-[#003366] text-center">
                   Our Journey
                 </h2>
                 <div className="relative">
-                  {/* Timeline */}
+                 
                   <div className="absolute left-0 md:left-1/2 h-full w-1 bg-[#00CC66]/20 transform md:translate-x-[-50%]"></div>
 
-                  {/* Timeline Items */}
+                
                   <div className="space-y-12 relative">
                     {[
                       {
@@ -253,7 +253,7 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
-            </TabsContent>
+            </TabsContent> */}
           </Tabs>
         </div>
       </section>
@@ -423,7 +423,7 @@ export default function AboutPage() {
                 icon: <Users className="h-10 w-10 text-[#00CC66]" />,
                 title: "Inclusivity",
                 description:
-                  "We design our solutions to be accessible to everyone, regardless of their economic background or location.",
+                  "Everyone deserves access to financial services, regardless of their socio-economic background, gender, or location.",
                 examples: [
                   "USSD interfaces for feature phones",
                   "Multilingual support for local languages",
@@ -434,7 +434,7 @@ export default function AboutPage() {
                 icon: <BarChart3 className="h-10 w-10 text-[#00CC66]" />,
                 title: "Innovation",
                 description:
-                  "We continuously explore new technologies and approaches to solve complex financial inclusion challenges.",
+                  "Technology and creativity are key to solving complex challenges.",
                 examples: [
                   "AI-powered credit scoring algorithms",
                   "Blockchain-based transaction systems",
@@ -445,7 +445,7 @@ export default function AboutPage() {
                 icon: <LineChart className="h-10 w-10 text-[#00CC66]" />,
                 title: "Sustainability",
                 description:
-                  "We create solutions that are environmentally responsible and economically viable for the long term.",
+                  "Economic growth must go hand-in-hand with environmental stewardship.",
                 examples: [
                   "Solar-powered financial infrastructure",
                   "Carbon-neutral operations",
@@ -454,13 +454,43 @@ export default function AboutPage() {
               },
               {
                 icon: <Target className="h-10 w-10 text-[#00CC66]" />,
-                title: "Impact-Driven",
+                title: "Empowerment",
                 description:
-                  "We measure our success by the positive change we create in communities, not just by financial metrics.",
+                  "Empowering individuals and communities leads to long-term economic and social progress.",
                 examples: [
                   "Rigorous impact assessment frameworks",
                   "Community feedback integration",
                   "Transparent reporting on social outcomes",
+                ],
+              },
+              {
+                icon: <Shield className="h-10 w-10 text-[#00CC66]" />,
+                title: "Integrity",
+                description: "Trust and transparency are the foundation of lasting relationships.",
+                examples: [
+                  "Clear and honest communication with customers",
+                  "Strict adherence to ethical lending practices",
+                  "Regular audits and compliance checks",
+                ],
+              },
+              {
+                icon: <Users className="h-10 w-10 text-[#00CC66]" />,
+                title: "Collaboration",
+                description: "Partnerships and collective efforts drive greater impact.",
+                examples: [
+                  "Working with financial institutions to expand access to credit",
+                  "Engaging with community organizations for financial literacy programs",
+                  "Integrating third-party APIs for seamless user experiences",
+                ],
+              },
+              {
+                icon: <Heart className="h-10 w-10 text-[#00CC66]" />,
+                title: "Customer-Centricity",
+                description: "The needs of users should always come first.",
+                examples: [
+                  "Personalized loan offers based on customer behavior",
+                  "24/7 customer support for seamless assistance",
+                  "User-friendly loan application process with minimal steps",
                 ],
               },
             ].map((value, index) => (
@@ -574,7 +604,7 @@ export default function AboutPage() {
       </section> */}
 
       {/* Awards and Recognition Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      {/* <section className="py-16 md:py-24 bg-gray-50">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tighter text-[#003366]">Awards & Recognition</h2>
@@ -637,7 +667,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Join Our Team Section */}
       <section className="py-16 md:py-24 bg-[#003366] text-white">
