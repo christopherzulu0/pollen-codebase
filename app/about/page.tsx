@@ -63,7 +63,7 @@ export default function AboutPage() {
                   value="core"
                   className="text-base px-6 data-[state=active]:bg-[#003366] data-[state=active]:text-white"
                 >
-                  Our Core Values
+                  Values
                 </TabsTrigger>
 
                 {/* <TabsTrigger
