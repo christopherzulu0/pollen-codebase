@@ -44,34 +44,27 @@ export default function AboutPage() {
         <div className="container px-4 md:px-6 mx-auto">
           <Tabs defaultValue="mission" className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <TabsList className="inline-flex h-12 bg-[#003366]/10">
+              <TabsList className="inline-flex flex-wrap h-auto bg-[#003366]/10">
                 <TabsTrigger
                   value="mission"
-                  className="text-base px-6 data-[state=active]:bg-[#003366] data-[state=active]:text-white"
+                  className="text-sm sm:text-base px-4 sm:px-6 py-2 data-[state=active]:bg-[#003366] data-[state=active]:text-white"
                 >
                   Our Mission
                 </TabsTrigger>
 
                 <TabsTrigger
                   value="vision"
-                  className="text-base px-6 data-[state=active]:bg-[#003366] data-[state=active]:text-white"
+                  className="text-sm sm:text-base px-4 sm:px-6 py-2 data-[state=active]:bg-[#003366] data-[state=active]:text-white"
                 >
                   Our Vision
                 </TabsTrigger>
 
                 <TabsTrigger
                   value="core"
-                  className="text-base px-6 data-[state=active]:bg-[#003366] data-[state=active]:text-white"
+                  className="text-sm sm:text-base px-4 sm:px-6 py-2 data-[state=active]:bg-[#003366] data-[state=active]:text-white"
                 >
-                  Values
+                  Core Values
                 </TabsTrigger>
-
-                {/* <TabsTrigger
-                  value="story"
-                  className="text-base px-6 data-[state=active]:bg-[#003366] data-[state=active]:text-white"
-                >
-                  Our Story
-                </TabsTrigger> */}
               </TabsList>
             </div>
 
