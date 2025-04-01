@@ -2,11 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { BarChart3, Users, LineChart, Target, ArrowRight, Calendar, Award, Briefcase, Shield, Heart } from "lucide-react"
+import { BarChart3, Users, LineChart, Target, ArrowRight, Shield, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-import AnimatedCounter from "@/components/animated-counter"
-import TeamSection from "@/components/team-section"
 
 export default function AboutPage() {
   return (
@@ -54,12 +51,21 @@ export default function AboutPage() {
                 >
                   Our Mission
                 </TabsTrigger>
+
                 <TabsTrigger
                   value="vision"
                   className="text-base px-6 data-[state=active]:bg-[#003366] data-[state=active]:text-white"
                 >
                   Our Vision
                 </TabsTrigger>
+
+                <TabsTrigger
+                  value="core"
+                  className="text-base px-6 data-[state=active]:bg-[#003366] data-[state=active]:text-white"
+                >
+                  Our Core Values
+                </TabsTrigger>
+
                 {/* <TabsTrigger
                   value="story"
                   className="text-base px-6 data-[state=active]:bg-[#003366] data-[state=active]:text-white"
@@ -108,7 +114,7 @@ export default function AboutPage() {
                       <div>
                         <h3 className="text-lg font-semibold text-[#003366]">Sustainable Impact</h3>
                         <p className="text-gray-600">
-                        Creating solutions that drive long-term economic growth and freedom for all.
+                          Creating solutions that drive long-term economic growth and freedom for all.
                         </p>
                       </div>
                     </div>
@@ -254,12 +260,125 @@ export default function AboutPage() {
                 </div>
               </div>
             </TabsContent> */}
+
+            <TabsContent value="core" className="mt-0">
+              <div className="space-y-8">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl font-bold tracking-tighter text-[#003366]">Our Core Values</h2>
+                  <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    The principles that guide our work and shape our approach to financial inclusion.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {[
+                    {
+                      icon: <Users className="h-10 w-10 text-[#00CC66]" />,
+                      title: "Inclusivity",
+                      description:
+                        "Everyone deserves access to financial services, regardless of their socio-economic background, gender, or location.",
+                      examples: [
+                        "USSD interfaces for feature phones",
+                        "Multilingual support for local languages",
+                        "Offline functionality for areas with limited connectivity",
+                      ],
+                    },
+                    {
+                      icon: <BarChart3 className="h-10 w-10 text-[#00CC66]" />,
+                      title: "Innovation",
+                      description: "Technology and creativity are key to solving complex challenges.",
+                      examples: [
+                        "AI-powered credit scoring algorithms",
+                        "Blockchain-based transaction systems",
+                        "Biometric authentication for the unbanked",
+                      ],
+                    },
+                    {
+                      icon: <LineChart className="h-10 w-10 text-[#00CC66]" />,
+                      title: "Sustainability",
+                      description: "Economic growth must go hand-in-hand with environmental stewardship.",
+                      examples: [
+                        "Solar-powered financial infrastructure",
+                        "Carbon-neutral operations",
+                        "Climate-resilient agricultural financing",
+                      ],
+                    },
+                    {
+                      icon: <Target className="h-10 w-10 text-[#00CC66]" />,
+                      title: "Empowerment",
+                      description:
+                        "Empowering individuals and communities leads to long-term economic and social progress.",
+                      examples: [
+                        "Rigorous impact assessment frameworks",
+                        "Community feedback integration",
+                        "Transparent reporting on social outcomes",
+                      ],
+                    },
+                    {
+                      icon: <Shield className="h-10 w-10 text-[#00CC66]" />,
+                      title: "Integrity",
+                      description: "Trust and transparency are the foundation of lasting relationships.",
+                      examples: [
+                        "Clear and honest communication with customers",
+                        "Strict adherence to ethical lending practices",
+                        "Regular audits and compliance checks",
+                      ],
+                    },
+                    {
+                      icon: <Users className="h-10 w-10 text-[#00CC66]" />,
+                      title: "Collaboration",
+                      description: "Partnerships and collective efforts drive greater impact.",
+                      examples: [
+                        "Working with financial institutions to expand access to credit",
+                        "Engaging with community organizations for financial literacy programs",
+                        "Integrating third-party APIs for seamless user experiences",
+                      ],
+                    },
+                    {
+                      icon: <Heart className="h-10 w-10 text-[#00CC66]" />,
+                      title: "Customer-Centricity",
+                      description: "The needs of users should always come first.",
+                      examples: [
+                        "Personalized loan offers based on customer behavior",
+                        "24/7 customer support for seamless assistance",
+                        "User-friendly loan application process with minimal steps",
+                      ],
+                    },
+                  ].map((value, index) => (
+                    <Card
+                      key={index}
+                      className="bg-gray-50 border-2 border-[#003366]/10 hover:border-[#003366]/30 transition-all group hover:shadow-lg"
+                    >
+                      <CardContent className="p-6 text-center">
+                        <div className="flex justify-center mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                          {value.icon}
+                        </div>
+                        <h3 className="text-xl font-bold text-[#003366] mb-3">{value.title}</h3>
+                        <p className="text-gray-600 mb-4">{value.description}</p>
+
+                        <div className="bg-[#003366]/5 p-4 rounded-lg mt-4 text-left opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[200px] transition-all duration-500">
+                          <h4 className="font-semibold text-[#003366] mb-2 text-sm">How We Apply This:</h4>
+                          <ul className="space-y-1">
+                            {value.examples.map((example, i) => (
+                              <li key={i} className="flex items-start">
+                                <span className="text-[#00CC66] mr-2 text-xs">•</span>
+                                <span className="text-gray-600 text-sm">{example}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </TabsContent>
           </Tabs>
         </div>
       </section>
 
       {/* Impact Statistics Section */}
-      <section className="py-16 md:py-24 bg-[#003366] text-white">
+      {/* <section className="py-16 md:py-24 bg-[#003366] text-white">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">Our Impact in Numbers</h2>
@@ -308,220 +427,10 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Problem Statement Section with Interactive Elements */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter text-[#003366]">The Challenge We're Addressing</h2>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              Financial exclusion remains a significant barrier to economic development in many regions.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#00CC66]">
-                <h3 className="text-xl font-semibold text-[#003366] mb-4">The Global Challenge</h3>
-                <p className="text-gray-600">
-                  Despite global advances in technology, financial exclusion remains a significant barrier to economic
-                  development in many regions. In Zambia alone, 70% of the population lacks access to basic financial
-                  services, limiting opportunities for growth and prosperity.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#00CC66]">
-                <h3 className="text-xl font-semibold text-[#003366] mb-4">Conventional Banking Limitation</h3>
-                <p className="text-gray-600">
-                  Traditional banking systems often fail to serve those without formal employment, credit history, or
-                  collateral. This creates a cycle of exclusion that disproportionately affects rural communities,
-                  women, and young entrepreneurs.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#00CC66]">
-                <h3 className="text-xl font-semibold text-[#003366] mb-4">Shortfalls of Existing Banking Services</h3>
-                <p className="text-gray-600 mb-4">
-                  Many banks in Zambia still rely on traditional banking models that require physical presence, extensive paperwork, and formal identification. This excludes individuals without proper documentation, such as rural farmers and youth.
-                </p>
-                <ul className="text-gray-600 space-y-2 list-disc pl-5">
-                  <li className="text-gray-600">Women often lack access to credit due to limited collateral, as property ownership is predominantly male-dominated.</li>
-                  <li className="text-gray-600">Youths face challenges in obtaining loans due to insufficient credit history or lack of employment stability.</li>
-                  <li className="text-gray-600">Farmers struggle with seasonal income cycles, yet banks rarely offer flexible repayment terms or agricultural-specific loans.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-[#003366] mb-6">Financial Exclusion by the Numbers</h3>
-
-                {/* Interactive Chart */}
-                <div className="space-y-6">
-                  {[
-                    { region: "Zambia", percentage: 70, color: "#00CC66" },
-                    { region: "Sub-Saharan Africa", percentage: 57, color: "#00AA55" },
-                    { region: "South Asia", percentage: 45, color: "#008844" },
-                    { region: "Latin America", percentage: 39, color: "#006633" },
-                    { region: "Global", percentage: 31, color: "#004422" },
-                  ].map((item, index) => (
-                    <div key={index} className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <span className="text-sm font-semibold text-gray-700">{item.region}</span>
-                        </div>
-                        <div>
-                          <span className="text-sm font-semibold text-gray-700">{item.percentage}%</span>
-                        </div>
-                      </div>
-                      <div className="relative pt-1">
-                        <div className="overflow-hidden h-4 text-xs flex rounded-full bg-gray-200 group cursor-pointer transition-all hover:shadow-md">
-                          <div
-                            style={{ width: `${item.percentage}%`, backgroundColor: item.color }}
-                            className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center rounded-full transition-all duration-500 ease-in-out group-hover:opacity-90"
-                          >
-                            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs font-bold">
-                              {item.percentage}%
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <h4 className="font-semibold text-[#003366] mb-3">Impact on Economic Growth</h4>
-                  <p className="text-gray-600 text-sm">
-                    Studies show that increasing financial inclusion by 10% can boost a country's GDP by up to 2.5%,
-                    highlighting the critical importance of addressing this challenge.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </section> */}
 
       {/* Enhanced Team Section */}
       {/* <TeamSection /> */}
-
-      {/* Enhanced Values Section with Animations */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter text-[#003366]">Our Core Values</h2>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              The principles that guide our work and shape our approach to financial inclusion.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <Users className="h-10 w-10 text-[#00CC66]" />,
-                title: "Inclusivity",
-                description:
-                  "Everyone deserves access to financial services, regardless of their socio-economic background, gender, or location.",
-                examples: [
-                  "USSD interfaces for feature phones",
-                  "Multilingual support for local languages",
-                  "Offline functionality for areas with limited connectivity",
-                ],
-              },
-              {
-                icon: <BarChart3 className="h-10 w-10 text-[#00CC66]" />,
-                title: "Innovation",
-                description:
-                  "Technology and creativity are key to solving complex challenges.",
-                examples: [
-                  "AI-powered credit scoring algorithms",
-                  "Blockchain-based transaction systems",
-                  "Biometric authentication for the unbanked",
-                ],
-              },
-              {
-                icon: <LineChart className="h-10 w-10 text-[#00CC66]" />,
-                title: "Sustainability",
-                description:
-                  "Economic growth must go hand-in-hand with environmental stewardship.",
-                examples: [
-                  "Solar-powered financial infrastructure",
-                  "Carbon-neutral operations",
-                  "Climate-resilient agricultural financing",
-                ],
-              },
-              {
-                icon: <Target className="h-10 w-10 text-[#00CC66]" />,
-                title: "Empowerment",
-                description:
-                  "Empowering individuals and communities leads to long-term economic and social progress.",
-                examples: [
-                  "Rigorous impact assessment frameworks",
-                  "Community feedback integration",
-                  "Transparent reporting on social outcomes",
-                ],
-              },
-              {
-                icon: <Shield className="h-10 w-10 text-[#00CC66]" />,
-                title: "Integrity",
-                description: "Trust and transparency are the foundation of lasting relationships.",
-                examples: [
-                  "Clear and honest communication with customers",
-                  "Strict adherence to ethical lending practices",
-                  "Regular audits and compliance checks",
-                ],
-              },
-              {
-                icon: <Users className="h-10 w-10 text-[#00CC66]" />,
-                title: "Collaboration",
-                description: "Partnerships and collective efforts drive greater impact.",
-                examples: [
-                  "Working with financial institutions to expand access to credit",
-                  "Engaging with community organizations for financial literacy programs",
-                  "Integrating third-party APIs for seamless user experiences",
-                ],
-              },
-              {
-                icon: <Heart className="h-10 w-10 text-[#00CC66]" />,
-                title: "Customer-Centricity",
-                description: "The needs of users should always come first.",
-                examples: [
-                  "Personalized loan offers based on customer behavior",
-                  "24/7 customer support for seamless assistance",
-                  "User-friendly loan application process with minimal steps",
-                ],
-              },
-            ].map((value, index) => (
-              <Card
-                key={index}
-                className="border-2 border-[#003366]/10 hover:border-[#003366]/30 transition-all group hover:shadow-lg"
-              >
-                <CardContent className="p-6 text-center">
-                  <div className="flex justify-center mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                    {value.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-[#4C4EFB] mb-3">{value.title}</h3>
-                  <p className="text-white mb-4">{value.description}</p>
-
-                  <div className="bg-[#003366]/5 p-4 rounded-lg mt-4 text-left opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[200px] transition-all duration-500">
-                    <h4 className="font-semibold text-[#4C4EFB] mb-2 text-sm">How We Apply This:</h4>
-                    <ul className="space-y-1">
-                      {value.examples.map((example, i) => (
-                        <li key={i} className="flex items-start">
-                          <span className="text-[#00CC66] mr-2 text-xs">•</span>
-                          <span className="text-white text-sm">{example}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Testimonials Section */}
       {/* <section className="py-16 md:py-24 bg-white">

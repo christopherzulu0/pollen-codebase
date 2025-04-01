@@ -1685,35 +1685,112 @@ export default function HomePage() {
         </div>
       </section> */}
 
+       {/* Problem Statement Section with Interactive Elements */}
+       <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter text-[#003366]">The Challenge We're Addressing</h2>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+              Financial exclusion remains a significant barrier to economic development in many regions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#00CC66]">
+                <h3 className="text-xl font-semibold text-[#003366] mb-4">The Global Challenge</h3>
+                <p className="text-gray-600">
+                  Despite global advances in technology, financial exclusion remains a significant barrier to economic
+                  development in many regions. In Zambia alone, 70% of the population lacks access to basic financial
+                  services, limiting opportunities for growth and prosperity.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#00CC66]">
+                <h3 className="text-xl font-semibold text-[#003366] mb-4">Conventional Banking Limitation</h3>
+                <p className="text-gray-600">
+                  Traditional banking systems often fail to serve those without formal employment, credit history, or
+                  collateral. This creates a cycle of exclusion that disproportionately affects rural communities,
+                  women, and young entrepreneurs.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#00CC66]">
+                <h3 className="text-xl font-semibold text-[#003366] mb-4">Shortfalls of Existing Banking Services</h3>
+                <p className="text-gray-600 mb-4">
+                  Many banks in Zambia still rely on traditional banking models that require physical presence, extensive paperwork, and formal identification. This excludes individuals without proper documentation, such as rural farmers and youth.
+                </p>
+                <ul className="text-gray-600 space-y-2 list-disc pl-5">
+                  <li className="text-gray-600">Women often lack access to credit due to limited collateral, as property ownership is predominantly male-dominated.</li>
+                  <li className="text-gray-600">Youths face challenges in obtaining loans due to insufficient credit history or lack of employment stability.</li>
+                  <li className="text-gray-600">Farmers struggle with seasonal income cycles, yet banks rarely offer flexible repayment terms or agricultural-specific loans.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div className="bg-white p-8 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold text-[#003366] mb-6">Financial Exclusion by the Numbers</h3>
+
+                {/* Interactive Chart */}
+                <div className="space-y-6">
+                  {[
+                    { region: "Zambia", percentage: 70, color: "#00CC66" },
+                    { region: "Sub-Saharan Africa", percentage: 57, color: "#00AA55" },
+                    { region: "South Asia", percentage: 45, color: "#008844" },
+                    { region: "Latin America", percentage: 39, color: "#006633" },
+                    { region: "Global", percentage: 31, color: "#004422" },
+                  ].map((item, index) => (
+                    <div key={index} className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <span className="text-sm font-semibold text-gray-700">{item.region}</span>
+                        </div>
+                        <div>
+                          <span className="text-sm font-semibold text-gray-700">{item.percentage}%</span>
+                        </div>
+                      </div>
+                      <div className="relative pt-1">
+                        <div className="overflow-hidden h-4 text-xs flex rounded-full bg-gray-200 group cursor-pointer transition-all hover:shadow-md">
+                          <div
+                            style={{ width: `${item.percentage}%`, backgroundColor: item.color }}
+                            className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center rounded-full transition-all duration-500 ease-in-out group-hover:opacity-90"
+                          >
+                            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs font-bold">
+                              {item.percentage}%
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <h4 className="font-semibold text-[#003366] mb-3">Impact on Economic Growth</h4>
+                  <p className="text-gray-600 text-sm">
+                    Studies show that increasing financial inclusion by 10% can boost a country's GDP by up to 2.5%,
+                    highlighting the critical importance of addressing this challenge.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
       {/* Blog Section */}
-      <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+      {/* <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#4C4EFB]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#003366]/5 rounded-full blur-3xl"></div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
-          {/* <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col items-center text-center space-y-4 mb-16"
-          >
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#003366]/10 dark:bg-[#003366]/30 text-[#003366] dark:text-white text-sm font-medium">
-              <span className="flex h-2 w-2 rounded-full bg-[#003366] dark:bg-[#4C4EFB] mr-2"></span>
-              Resources & Insights
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-[#003366] dark:text-white max-w-3xl">
-              Latest <span className="text-[#4C4EFB]">Articles & News</span>
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300 max-w-[800px] md:text-lg mt-4">
-              Stay informed with our latest insights on financial inclusion, blockchain technology, and sustainable
-              development.
-            </p>
-          </motion.div> */}
-
+  
           <BlogSection />
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       {/* <section className="py-20 md:py-32 bg-gradient-to-br from-[#002244] via-[#003366] to-[#004488] relative overflow-hidden">
