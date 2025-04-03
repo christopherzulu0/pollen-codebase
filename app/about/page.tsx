@@ -161,12 +161,12 @@ export default function AboutPage() {
                           Support 100,000 farmers with climate-resilient agricultural financing
                         </span>
                       </li> */}
-                      <li className="flex items-start">
+                      {/* <li className="flex items-start">
                         <span className="text-[#00CC66] mr-2 font-bold">•</span>
                         <span className="text-gray-600">
                           Achieve carbon neutrality in all our operations and supported projects
                         </span>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -572,7 +572,7 @@ export default function AboutPage() {
       </section> */}
 
       {/* Join Our Team Section */}
-      <section className="py-16 md:py-24 bg-[#003366] text-white">
+      {/* <section className="py-16 md:py-24 bg-[#003366] text-white">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -630,7 +630,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

@@ -337,7 +337,7 @@ export default function HomePage() {
                 className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-[#003366]/20 border border-white/10 backdrop-blur-sm transform"
               >
                 <Image
-                  src='/hero.jpg'
+                  src='https://bitquery.io/_next/image?url=%2Fblog%2Fcelo-api%2Fcover.png&w=3840&q=75'
                   alt="Financial Inclusion"
                   width={600}
                   height={600}
@@ -1686,7 +1686,7 @@ export default function HomePage() {
       </section> */}
 
        {/* Problem Statement Section with Interactive Elements */}
-       <section className="py-16 md:py-24 bg-gray-50">
+       {/* <section className="py-16 md:py-24 bg-gray-50">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tighter text-[#003366]">The Challenge We're Addressing</h2>
@@ -1732,7 +1732,7 @@ export default function HomePage() {
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <h3 className="text-xl font-semibold text-[#003366] mb-6">Financial Exclusion by the Numbers</h3>
 
-                {/* Interactive Chart */}
+               
                 <div className="space-y-6">
                   {[
                     { region: "Zambia", percentage: 70, color: "#00CC66" },
@@ -1777,7 +1777,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
 

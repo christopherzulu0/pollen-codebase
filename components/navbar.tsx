@@ -48,7 +48,7 @@ export default function Navbar() {
                 P
               </div>
               <span className={`text-2xl font-bold ${isScrolled ? "text-[#003366] dark:text-white" : "text-white"}`}>
-                Pollen AI
+                Pollen 
               </span>
             </Link>
           </div>
