@@ -287,7 +287,7 @@ export default function ServicesPage() {
                         <div className="p-2 rounded-full bg-[#00CC66]/10 dark:bg-emerald-900/30">
                           <Wallet className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />
                         </div>
-                        <h3 className="ml-2 text-2xl font-bold text-[#003366] dark:text-white">Normal Loans</h3>
+                        <h3 className="ml-2 text-2xl font-bold text-[#003366] dark:text-white">Loans</h3>
                       </div>
                       <p className="text-gray-600 dark:text-gray-300 mb-6">
                         Our AI-powered lending platform provides quick access to capital with flexible terms and
@@ -320,7 +320,7 @@ export default function ServicesPage() {
                                 Loan Amount
                               </label>
                               <span className="text-sm font-semibold text-[#003366] dark:text-white">
-                                ${loanAmount.toLocaleString()}
+                                K{loanAmount.toLocaleString()}
                               </span>
                             </div>
                             <Slider
@@ -332,8 +332,8 @@ export default function ServicesPage() {
                               className="dark:bg-gray-700"
                             />
                             <div className="flex justify-between mt-1">
-                              <span className="text-xs text-gray-500 dark:text-gray-400">$100</span>
-                              <span className="text-xs text-gray-500 dark:text-gray-400">$10,000</span>
+                              <span className="text-xs text-gray-500 dark:text-gray-400">K100</span>
+                              <span className="text-xs text-gray-500 dark:text-gray-400">K10,000</span>
                             </div>
                           </div>
                           <div>
@@ -362,7 +362,7 @@ export default function ServicesPage() {
                             <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
                               <p className="text-xs text-gray-500 dark:text-gray-400">Monthly Payment</p>
                               <p className="text-lg md:text-xl font-bold text-[#003366] dark:text-white">
-                                ${calculateMonthlyPayment()}
+                                K{calculateMonthlyPayment()}
                               </p>
                             </div>
                             <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
@@ -373,7 +373,7 @@ export default function ServicesPage() {
                           <div className="mt-2 text-xs text-gray-500 dark:text-gray-400 text-center">
                             Total repayment:{" "}
                             <span className="font-medium">
-                              ${(Number.parseFloat(calculateMonthlyPayment()) * loanTerm).toFixed(2)}
+                              K{(Number.parseFloat(calculateMonthlyPayment()) * loanTerm).toFixed(2)}
                             </span>
                           </div>
                         </div>
@@ -387,7 +387,7 @@ export default function ServicesPage() {
                     <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-lg">
                       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#003366]/80 dark:to-gray-900/80 z-10"></div>
                       <Image
-                        src="/placeholder.svg?height=800&width=600"
+                                              src="/digital.jpg"
                         alt="Normal Loans"
                         fill
                         className="object-cover"
@@ -416,125 +416,127 @@ export default function ServicesPage() {
                     </div>
                   </motion.div>
 
-                  {/* Divider */}
-                  <div className="border-t border-gray-200 dark:border-gray-700 my-12"></div>
+                                  {/* Divider */}
+                                  {/* Crypto Loans */}
 
-                  {/* Crypto Loans */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-                  >
-                    <div className="md:order-2">
-                      <div className="flex items-center mb-4">
-                        <div className="p-2 rounded-full bg-[#00CC66]/10 dark:bg-emerald-900/30">
-                          <Bitcoin className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />
-                        </div>
-                        <h3 className="ml-2 text-2xl font-bold text-[#003366] dark:text-white">Crypto Loans</h3>
-                      </div>
-                      <p className="text-gray-600 dark:text-gray-300 mb-6">
-                        Leverage your cryptocurrency holdings to access instant liquidity without selling your assets,
-                        with competitive rates and flexible terms.
-                      </p>
-                      <ul className="space-y-3">
-                        {[
-                          "Use your crypto as collateral for instant loans",
-                          "No credit checks required - your crypto is your credit",
-                          "Maintain ownership of your crypto assets",
-                          "Benefit from potential crypto appreciation",
-                          "Multiple cryptocurrency options supported",
-                        ].map((feature, index) => (
-                          <li key={index} className="flex items-start">
-                            <Check className="h-5 w-5 text-[#00CC66] dark:text-emerald-400 mr-2 flex-shrink-0 mt-0.5" />
-                            <span className="dark:text-gray-300">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
+                  {/*<div className="border-t border-gray-200 dark:border-gray-700 my-12"></div>*/}
 
-                      {/* Interactive Crypto Loan Calculator */}
-                      <div className="mt-8 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
-                        <h4 className="text-lg font-semibold text-[#003366] dark:text-white mb-4">
-                          Crypto Loan Calculator
-                        </h4>
-                        <div className="space-y-4">
-                          <div className="flex items-center gap-4">
-                            <div className="flex-1">
-                              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                                Crypto Amount: {cryptoAmount} {cryptoType}
-                              </label>
-                              <Slider
-                                value={[cryptoAmount]}
-                                min={0.1}
-                                max={10}
-                                step={0.1}
-                                onValueChange={(value) => setCryptoAmount(value[0])}
-                                className="dark:bg-gray-700"
-                              />
-                            </div>
-                            <div className="w-24">
-                              <select
-                                value={cryptoType}
-                                onChange={(e) => setCryptoType(e.target.value)}
-                                className="w-full h-10 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 px-3"
-                              >
-                                <option value="BTC">BTC</option>
-                                <option value="ETH">ETH</option>
-                                <option value="USDC">USDC</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div className="grid grid-cols-2 gap-4 mt-4">
-                            <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
-                              <p className="text-xs text-gray-500 dark:text-gray-400">Collateral Value</p>
-                              <p className="text-xl font-bold text-[#003366] dark:text-white">
-                                ${cryptoLoanDetails.collateralValue}
-                              </p>
-                            </div>
-                            <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
-                              <p className="text-xs text-gray-500 dark:text-gray-400">Max Loan Amount (70% LTV)</p>
-                              <p className="text-xl font-bold text-[#003366] dark:text-white">
-                                ${cryptoLoanDetails.maxLoanAmount}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                  
+                  {/*<motion.div*/}
+                  {/*  initial={{ opacity: 0 }}*/}
+                  {/*  animate={{ opacity: 1 }}*/}
+                  {/*  transition={{ duration: 0.5, delay: 0.2 }}*/}
+                  {/*  className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"*/}
+                  {/*>*/}
+                  {/*  <div className="md:order-2">*/}
+                  {/*    <div className="flex items-center mb-4">*/}
+                  {/*      <div className="p-2 rounded-full bg-[#00CC66]/10 dark:bg-emerald-900/30">*/}
+                  {/*        <Bitcoin className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />*/}
+                  {/*      </div>*/}
+                  {/*      <h3 className="ml-2 text-2xl font-bold text-[#003366] dark:text-white">Crypto Loans</h3>*/}
+                  {/*    </div>*/}
+                  {/*    <p className="text-gray-600 dark:text-gray-300 mb-6">*/}
+                  {/*      Leverage your cryptocurrency holdings to access instant liquidity without selling your assets,*/}
+                  {/*      with competitive rates and flexible terms.*/}
+                  {/*    </p>*/}
+                  {/*    <ul className="space-y-3">*/}
+                  {/*      {[*/}
+                  {/*        "Use your crypto as collateral for instant loans",*/}
+                  {/*        "No credit checks required - your crypto is your credit",*/}
+                  {/*        "Maintain ownership of your crypto assets",*/}
+                  {/*        "Benefit from potential crypto appreciation",*/}
+                  {/*        "Multiple cryptocurrency options supported",*/}
+                  {/*      ].map((feature, index) => (*/}
+                  {/*        <li key={index} className="flex items-start">*/}
+                  {/*          <Check className="h-5 w-5 text-[#00CC66] dark:text-emerald-400 mr-2 flex-shrink-0 mt-0.5" />*/}
+                  {/*          <span className="dark:text-gray-300">{feature}</span>*/}
+                  {/*        </li>*/}
+                  {/*      ))}*/}
+                  {/*    </ul>*/}
 
-                      <Button className="mt-6 bg-[#003366] hover:bg-[#003366]/80 dark:bg-blue-900 dark:hover:bg-blue-800">
-                        Get Crypto Loan
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </div>
-                    <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-lg md:order-1">
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#003366]/80 dark:to-gray-900/80 z-10"></div>
-                      <Image
-                        src="/placeholder.svg?height=800&width=600"
-                        alt="Crypto Loans"
-                        fill
-                        className="object-cover"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {["Bitcoin", "Ethereum", "USDC", "Solana", "Polkadot"].map((crypto, index) => (
-                            <Badge key={index} variant="outline" className="bg-white/10 text-white border-white/20">
-                              {crypto}
-                            </Badge>
-                          ))}
-                        </div>
-                        <div className="flex justify-between">
-                          <div className="flex items-center">
-                            <Lock className="h-4 w-4 text-white mr-1" />
-                            <span className="text-white text-sm">Secure custody</span>
-                          </div>
-                          <div className="flex items-center">
-                            <Percent className="h-4 w-4 text-white mr-1" />
-                            <span className="text-white text-sm">70% LTV ratio</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
+                  {/*    */}{/* Interactive Crypto Loan Calculator */}
+                  {/*    <div className="mt-8 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">*/}
+                  {/*      <h4 className="text-lg font-semibold text-[#003366] dark:text-white mb-4">*/}
+                  {/*        Crypto Loan Calculator*/}
+                  {/*      </h4>*/}
+                  {/*      <div className="space-y-4">*/}
+                  {/*        <div className="flex items-center gap-4">*/}
+                  {/*          <div className="flex-1">*/}
+                  {/*            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">*/}
+                  {/*              Crypto Amount: {cryptoAmount} {cryptoType}*/}
+                  {/*            </label>*/}
+                  {/*            <Slider*/}
+                  {/*              value={[cryptoAmount]}*/}
+                  {/*              min={0.1}*/}
+                  {/*              max={10}*/}
+                  {/*              step={0.1}*/}
+                  {/*              onValueChange={(value) => setCryptoAmount(value[0])}*/}
+                  {/*              className="dark:bg-gray-700"*/}
+                  {/*            />*/}
+                  {/*          </div>*/}
+                  {/*          <div className="w-24">*/}
+                  {/*            <select*/}
+                  {/*              value={cryptoType}*/}
+                  {/*              onChange={(e) => setCryptoType(e.target.value)}*/}
+                  {/*              className="w-full h-10 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 px-3"*/}
+                  {/*            >*/}
+                  {/*              <option value="BTC">BTC</option>*/}
+                  {/*              <option value="ETH">ETH</option>*/}
+                  {/*              <option value="USDC">USDC</option>*/}
+                  {/*            </select>*/}
+                  {/*          </div>*/}
+                  {/*        </div>*/}
+                  {/*        <div className="grid grid-cols-2 gap-4 mt-4">*/}
+                  {/*          <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">*/}
+                  {/*            <p className="text-xs text-gray-500 dark:text-gray-400">Collateral Value</p>*/}
+                  {/*            <p className="text-xl font-bold text-[#003366] dark:text-white">*/}
+                  {/*              ${cryptoLoanDetails.collateralValue}*/}
+                  {/*            </p>*/}
+                  {/*          </div>*/}
+                  {/*          <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">*/}
+                  {/*            <p className="text-xs text-gray-500 dark:text-gray-400">Max Loan Amount (70% LTV)</p>*/}
+                  {/*            <p className="text-xl font-bold text-[#003366] dark:text-white">*/}
+                  {/*              ${cryptoLoanDetails.maxLoanAmount}*/}
+                  {/*            </p>*/}
+                  {/*          </div>*/}
+                  {/*        </div>*/}
+                  {/*      </div>*/}
+                  {/*    </div>*/}
+
+                  {/*    <Button className="mt-6 bg-[#003366] hover:bg-[#003366]/80 dark:bg-blue-900 dark:hover:bg-blue-800">*/}
+                  {/*      Get Crypto Loan*/}
+                  {/*      <ArrowRight className="ml-2 h-4 w-4" />*/}
+                  {/*    </Button>*/}
+                  {/*  </div>*/}
+                  {/*  <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-lg md:order-1">*/}
+                  {/*    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#003366]/80 dark:to-gray-900/80 z-10"></div>*/}
+                  {/*    <Image*/}
+                  {/*      src="/placeholder.svg?height=800&width=600"*/}
+                  {/*      alt="Crypto Loans"*/}
+                  {/*      fill*/}
+                  {/*      className="object-cover"*/}
+                  {/*    />*/}
+                  {/*    <div className="absolute bottom-0 left-0 right-0 p-6 z-20">*/}
+                  {/*      <div className="flex flex-wrap gap-2 mb-4">*/}
+                  {/*        {["Bitcoin", "Ethereum", "USDC", "Solana", "Polkadot"].map((crypto, index) => (*/}
+                  {/*          <Badge key={index} variant="outline" className="bg-white/10 text-white border-white/20">*/}
+                  {/*            {crypto}*/}
+                  {/*          </Badge>*/}
+                  {/*        ))}*/}
+                  {/*      </div>*/}
+                  {/*      <div className="flex justify-between">*/}
+                  {/*        <div className="flex items-center">*/}
+                  {/*          <Lock className="h-4 w-4 text-white mr-1" />*/}
+                  {/*          <span className="text-white text-sm">Secure custody</span>*/}
+                  {/*        </div>*/}
+                  {/*        <div className="flex items-center">*/}
+                  {/*          <Percent className="h-4 w-4 text-white mr-1" />*/}
+                  {/*          <span className="text-white text-sm">70% LTV ratio</span>*/}
+                  {/*        </div>*/}
+                  {/*      </div>*/}
+                  {/*    </div>*/}
+                  {/*  </div>*/}
+                  {/*</motion.div>*/}
                 </div>
               </TabsContent>
 
@@ -589,7 +591,7 @@ export default function ServicesPage() {
                           </div>
                           <div className="flex items-center justify-between">
                             <span className="text-gray-600 dark:text-gray-300">Average Loan Size</span>
-                            <span className="font-medium text-[#003366] dark:text-white">$2,500</span>
+                            <span className="font-medium text-[#003366] dark:text-white">K2,500</span>
                           </div>
                           <div className="flex items-center justify-between">
                             <span className="text-gray-600 dark:text-gray-300">Next Group Formation</span>
@@ -606,7 +608,7 @@ export default function ServicesPage() {
                     <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-lg">
                       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#003366]/80 dark:to-gray-900/80 z-10"></div>
                       <Image
-                        src="/placeholder.svg?height=800&width=600"
+                        src="/village.jpg"
                         alt="Individual Loans"
                         fill
                         className="object-cover"
@@ -642,122 +644,123 @@ export default function ServicesPage() {
                     </div>
                   </motion.div>
 
-                  {/* Divider */}
-                  <div className="border-t border-gray-200 dark:border-gray-700 my-12"></div>
+                                  {/* Divider */}
+                                  {/* Institution Loans */}
+                  {/*<div className="border-t border-gray-200 dark:border-gray-700 my-12"></div>*/}
 
-                  {/* Institution Loans */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-                  >
-                    <div className="md:order-2">
-                      <div className="flex items-center mb-4">
-                        <div className="p-2 rounded-full bg-[#00CC66]/10 dark:bg-emerald-900/30">
-                          <Building className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />
-                        </div>
-                        <h3 className="ml-2 text-2xl font-bold text-[#003366] dark:text-white">Institution Loans</h3>
-                      </div>
-                      <p className="text-gray-600 dark:text-gray-300 mb-6">
-                        Empower your organization with blockchain-based village banking solutions that scale community
-                        finance for cooperatives, NGOs, and businesses.
-                      </p>
-                      <ul className="space-y-3">
-                        {[
-                          "Manage multiple village banking groups",
-                          "Automated loan disbursement and collection",
-                          "Real-time reporting and analytics",
-                          "Customizable loan terms for your community",
-                          "Integration with existing financial systems",
-                        ].map((feature, index) => (
-                          <li key={index} className="flex items-start">
-                            <Check className="h-5 w-5 text-[#00CC66] dark:text-emerald-400 mr-2 flex-shrink-0 mt-0.5" />
-                            <span className="dark:text-gray-300">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
+                 
+                  {/*<motion.div*/}
+                  {/*  initial={{ opacity: 0 }}*/}
+                  {/*  animate={{ opacity: 1 }}*/}
+                  {/*  transition={{ duration: 0.5, delay: 0.2 }}*/}
+                  {/*  className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"*/}
+                  {/*>*/}
+                  {/*  <div className="md:order-2">*/}
+                  {/*    <div className="flex items-center mb-4">*/}
+                  {/*      <div className="p-2 rounded-full bg-[#00CC66]/10 dark:bg-emerald-900/30">*/}
+                  {/*        <Building className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />*/}
+                  {/*      </div>*/}
+                  {/*      <h3 className="ml-2 text-2xl font-bold text-[#003366] dark:text-white">Institution Loans</h3>*/}
+                  {/*    </div>*/}
+                  {/*    <p className="text-gray-600 dark:text-gray-300 mb-6">*/}
+                  {/*      Empower your organization with blockchain-based village banking solutions that scale community*/}
+                  {/*      finance for cooperatives, NGOs, and businesses.*/}
+                  {/*    </p>*/}
+                  {/*    <ul className="space-y-3">*/}
+                  {/*      {[*/}
+                  {/*        "Manage multiple village banking groups",*/}
+                  {/*        "Automated loan disbursement and collection",*/}
+                  {/*        "Real-time reporting and analytics",*/}
+                  {/*        "Customizable loan terms for your community",*/}
+                  {/*        "Integration with existing financial systems",*/}
+                  {/*      ].map((feature, index) => (*/}
+                  {/*        <li key={index} className="flex items-start">*/}
+                  {/*          <Check className="h-5 w-5 text-[#00CC66] dark:text-emerald-400 mr-2 flex-shrink-0 mt-0.5" />*/}
+                  {/*          <span className="dark:text-gray-300">{feature}</span>*/}
+                  {/*        </li>*/}
+                  {/*      ))}*/}
+                  {/*    </ul>*/}
 
-                      {/* Institution Features */}
-                      <div className="mt-8 grid grid-cols-2 gap-4">
-                        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
-                          <div className="flex items-center mb-2">
-                            <Globe className="h-5 w-5 text-[#00CC66] dark:text-emerald-400 mr-2" />
-                            <h5 className="font-medium text-[#003366] dark:text-white">Global Reach</h5>
-                          </div>
-                          <p className="text-sm text-gray-600 dark:text-gray-300">
-                            Deploy village banking across multiple regions with localized configurations.
-                          </p>
-                        </div>
-                        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
-                          <div className="flex items-center mb-2">
-                            <LineChart className="h-5 w-5 text-[#00CC66] dark:text-emerald-400 mr-2" />
-                            <h5 className="font-medium text-[#003366] dark:text-white">Advanced Analytics</h5>
-                          </div>
-                          <p className="text-sm text-gray-600 dark:text-gray-300">
-                            Track performance metrics and gain insights into community financial health.
-                          </p>
-                        </div>
-                        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
-                          <div className="flex items-center mb-2">
-                            <ShieldCheck className="h-5 w-5 text-[#00CC66] dark:text-emerald-400 mr-2" />
-                            <h5 className="font-medium text-[#003366] dark:text-white">Compliance Tools</h5>
-                          </div>
-                          <p className="text-sm text-gray-600 dark:text-gray-300">
-                            Built-in regulatory compliance features for different jurisdictions.
-                          </p>
-                        </div>
-                        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
-                          <div className="flex items-center mb-2">
-                            <Sparkles className="h-5 w-5 text-[#00CC66] dark:text-emerald-400 mr-2" />
-                            <h5 className="font-medium text-[#003366] dark:text-white">Custom Branding</h5>
-                          </div>
-                          <p className="text-sm text-gray-600 dark:text-gray-300">
-                            White-label solutions with your organization's branding and identity.
-                          </p>
-                        </div>
-                      </div>
+                  {/*    */}{/* Institution Features */}
+                  {/*    <div className="mt-8 grid grid-cols-2 gap-4">*/}
+                  {/*      <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">*/}
+                  {/*        <div className="flex items-center mb-2">*/}
+                  {/*          <Globe className="h-5 w-5 text-[#00CC66] dark:text-emerald-400 mr-2" />*/}
+                  {/*          <h5 className="font-medium text-[#003366] dark:text-white">Global Reach</h5>*/}
+                  {/*        </div>*/}
+                  {/*        <p className="text-sm text-gray-600 dark:text-gray-300">*/}
+                  {/*          Deploy village banking across multiple regions with localized configurations.*/}
+                  {/*        </p>*/}
+                  {/*      </div>*/}
+                  {/*      <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">*/}
+                  {/*        <div className="flex items-center mb-2">*/}
+                  {/*          <LineChart className="h-5 w-5 text-[#00CC66] dark:text-emerald-400 mr-2" />*/}
+                  {/*          <h5 className="font-medium text-[#003366] dark:text-white">Advanced Analytics</h5>*/}
+                  {/*        </div>*/}
+                  {/*        <p className="text-sm text-gray-600 dark:text-gray-300">*/}
+                  {/*          Track performance metrics and gain insights into community financial health.*/}
+                  {/*        </p>*/}
+                  {/*      </div>*/}
+                  {/*      <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">*/}
+                  {/*        <div className="flex items-center mb-2">*/}
+                  {/*          <ShieldCheck className="h-5 w-5 text-[#00CC66] dark:text-emerald-400 mr-2" />*/}
+                  {/*          <h5 className="font-medium text-[#003366] dark:text-white">Compliance Tools</h5>*/}
+                  {/*        </div>*/}
+                  {/*        <p className="text-sm text-gray-600 dark:text-gray-300">*/}
+                  {/*          Built-in regulatory compliance features for different jurisdictions.*/}
+                  {/*        </p>*/}
+                  {/*      </div>*/}
+                  {/*      <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">*/}
+                  {/*        <div className="flex items-center mb-2">*/}
+                  {/*          <Sparkles className="h-5 w-5 text-[#00CC66] dark:text-emerald-400 mr-2" />*/}
+                  {/*          <h5 className="font-medium text-[#003366] dark:text-white">Custom Branding</h5>*/}
+                  {/*        </div>*/}
+                  {/*        <p className="text-sm text-gray-600 dark:text-gray-300">*/}
+                  {/*          White-label solutions with your organization's branding and identity.*/}
+                  {/*        </p>*/}
+                  {/*      </div>*/}
+                  {/*    </div>*/}
 
-                      <Button className="mt-6 bg-[#003366] hover:bg-[#003366]/80 dark:bg-blue-900 dark:hover:bg-blue-800">
-                        Partner With Us
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </div>
-                    <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-lg md:order-1">
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#003366]/80 dark:to-gray-900/80 z-10"></div>
-                      <Image
-                        src="/placeholder.svg?height=800&width=600"
-                        alt="Institution Loans"
-                        fill
-                        className="object-cover"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
-                        <h4 className="text-white font-semibold mb-2">Partner Organizations</h4>
-                        <div className="grid grid-cols-3 gap-2 mb-4">
-                          {[1, 2, 3, 4, 5, 6].map((org) => (
-                            <div
-                              key={org}
-                              className="bg-white/20 backdrop-blur-sm rounded-md p-2 flex items-center justify-center"
-                            >
-                              <div className="w-8 h-8 rounded-full bg-white/80 flex items-center justify-center">
-                                <Building className="h-4 w-4 text-[#003366]" />
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                        <div className="flex justify-between">
-                          <div className="flex items-center">
-                            <Lightbulb className="h-4 w-4 text-white mr-1" />
-                            <span className="text-white text-sm">Custom solutions</span>
-                          </div>
-                          <div className="flex items-center">
-                            <DollarSign className="h-4 w-4 text-white mr-1" />
-                            <span className="text-white text-sm">Scale with confidence</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
+                  {/*    <Button className="mt-6 bg-[#003366] hover:bg-[#003366]/80 dark:bg-blue-900 dark:hover:bg-blue-800">*/}
+                  {/*      Partner With Us*/}
+                  {/*      <ArrowRight className="ml-2 h-4 w-4" />*/}
+                  {/*    </Button>*/}
+                  {/*  </div>*/}
+                  {/*  <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-lg md:order-1">*/}
+                  {/*    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#003366]/80 dark:to-gray-900/80 z-10"></div>*/}
+                  {/*    <Image*/}
+                  {/*      src="/placeholder.svg?height=800&width=600"*/}
+                  {/*      alt="Institution Loans"*/}
+                  {/*      fill*/}
+                  {/*      className="object-cover"*/}
+                  {/*    />*/}
+                  {/*    <div className="absolute bottom-0 left-0 right-0 p-6 z-20">*/}
+                  {/*      <h4 className="text-white font-semibold mb-2">Partner Organizations</h4>*/}
+                  {/*      <div className="grid grid-cols-3 gap-2 mb-4">*/}
+                  {/*        {[1, 2, 3, 4, 5, 6].map((org) => (*/}
+                  {/*          <div*/}
+                  {/*            key={org}*/}
+                  {/*            className="bg-white/20 backdrop-blur-sm rounded-md p-2 flex items-center justify-center"*/}
+                  {/*          >*/}
+                  {/*            <div className="w-8 h-8 rounded-full bg-white/80 flex items-center justify-center">*/}
+                  {/*              <Building className="h-4 w-4 text-[#003366]" />*/}
+                  {/*            </div>*/}
+                  {/*          </div>*/}
+                  {/*        ))}*/}
+                  {/*      </div>*/}
+                  {/*      <div className="flex justify-between">*/}
+                  {/*        <div className="flex items-center">*/}
+                  {/*          <Lightbulb className="h-4 w-4 text-white mr-1" />*/}
+                  {/*          <span className="text-white text-sm">Custom solutions</span>*/}
+                  {/*        </div>*/}
+                  {/*        <div className="flex items-center">*/}
+                  {/*          <DollarSign className="h-4 w-4 text-white mr-1" />*/}
+                  {/*          <span className="text-white text-sm">Scale with confidence</span>*/}
+                  {/*        </div>*/}
+                  {/*      </div>*/}
+                  {/*    </div>*/}
+                  {/*  </div>*/}
+                  {/*</motion.div>*/}
                 </div>
               </TabsContent>
             </div>
@@ -796,14 +799,14 @@ export default function ServicesPage() {
                 cta: "Apply Now",
                 highlight: "From 5.9% APR",
               },
-              {
-                title: "Crypto Loans",
-                icon: <Bitcoin className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />,
-                description: "Use your cryptocurrency as collateral without selling your digital assets.",
-                features: ["No credit checks", "Keep your crypto", "Multiple coins supported", "Low interest rates"],
-                cta: "Get Crypto Loan",
-                highlight: "Up to 70% LTV",
-              },
+              //{
+              //  title: "Crypto Loans",
+              //  icon: <Bitcoin className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />,
+              //  description: "Use your cryptocurrency as collateral without selling your digital assets.",
+              //  features: ["No credit checks", "Keep your crypto", "Multiple coins supported", "Low interest rates"],
+              //  cta: "Get Crypto Loan",
+              //  highlight: "Up to 70% LTV",
+              //},
               {
                 title: "Village Banking",
                 icon: <Users className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />,
@@ -924,14 +927,14 @@ export default function ServicesPage() {
                         requirements: "Cryptocurrency holdings, wallet connection",
                         action: "Get Loan",
                       },
-                      {
-                        service: "Individual Village Banking",
-                        icon: <Users className="h-4 w-4 sm:h-5 sm:w-5 text-[#00CC66] dark:text-emerald-400" />,
-                        idealFor: "Community members seeking group-backed financing",
-                        features: ["Community support", "Lower rates", "Social accountability"],
-                        requirements: "Join a group or form a new group of 5-20 members",
-                        action: "Join Group",
-                      },
+                      //{
+                      //  service: "Individual Village Banking",
+                      //  icon: <Users className="h-4 w-4 sm:h-5 sm:w-5 text-[#00CC66] dark:text-emerald-400" />,
+                      //  idealFor: "Community members seeking group-backed financing",
+                      //  features: ["Community support", "Lower rates", "Social accountability"],
+                      //  requirements: "Join a group or form a new group of 5-20 members",
+                      //  action: "Join Group",
+                      //},
                       {
                         service: "Institution Village Banking",
                         icon: <Building className="h-4 w-4 sm:h-5 sm:w-5 text-[#00CC66] dark:text-emerald-400" />,
@@ -1357,7 +1360,7 @@ export default function ServicesPage() {
                 <CardContent className="pt-4 sm:pt-6">
                   <div className="space-y-4 sm:space-y-6">
                     {[
-                      { label: "Loans Disbursed", value: "$25M+", growth: "+32% this year" },
+                      { label: "Loans Disbursed", value: "K25M+", growth: "+32% this year" },
                       { label: "Village Banking Groups", value: "1,200+", growth: "across 15 countries" },
                       { label: "User Satisfaction", value: "4.8/5", growth: "based on 12,000+ reviews" },
                     ].map((stat, index) => (

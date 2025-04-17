@@ -13,7 +13,10 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  images: {
+    images: {
+      //  domains: [
+      //      ''
+      //],
     unoptimized: true,
   },
   experimental: {

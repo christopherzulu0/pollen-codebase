@@ -337,7 +337,7 @@ export default function HomePage() {
                 className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-[#003366]/20 border border-white/10 backdrop-blur-sm transform"
               >
                 <Image
-                  src='https://bitquery.io/_next/image?url=%2Fblog%2Fcelo-api%2Fcover.png&w=3840&q=75'
+                  src='/home.jpg'
                   alt="Financial Inclusion"
                   width={600}
                   height={600}

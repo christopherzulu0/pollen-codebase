@@ -12,7 +12,7 @@ export default function AboutPage() {
       <section className="relative py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
+                      src="https://meraki.cisco.com/wp-content/uploads/2022/12/finserv-5050-hero-2x.png"
             alt="Pollen AI Mission"
             fill
             className="object-cover opacity-20"
@@ -115,7 +115,7 @@ export default function AboutPage() {
                 </div>
                 <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=800&width=600"
+                                      src="/mission1.jpg"
                     alt="Pollen AI Mission Visualization"
                     fill
                     className="object-cover"
@@ -128,7 +128,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1 relative h-[400px] rounded-lg overflow-hidden shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=800&width=600"
+                                      src="/vision.jpg"
                     alt="Pollen AI Vision"
                     fill
                     className="object-cover"
