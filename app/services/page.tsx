@@ -792,7 +792,7 @@ export default function ServicesPage() {
           <div className="overflow-x-auto pb-4 -mx-4 px-4 flex snap-x snap-mandatory gap-4 scrollbar-hide">
             {[
               {
-                title: "Normal Loans",
+                title: "Loans",
                 icon: <Wallet className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />,
                 description: "Quick access to capital with AI-powered credit scoring and no collateral required.",
                 features: ["Non-collateralized", "Flexible terms", "Instant approval", "No hidden fees"],
@@ -815,14 +815,14 @@ export default function ServicesPage() {
                 cta: "Join a Group",
                 highlight: "4.5% APR",
               },
-              {
-                title: "Institution Banking",
-                icon: <Building className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />,
-                description: "Empower your organization with blockchain-based village banking solutions.",
-                features: ["Manage multiple groups", "Automated processes", "Real-time analytics", "Custom terms"],
-                cta: "Partner With Us",
-                highlight: "500+ Organizations",
-              },
+              //{
+              //  title: "Institution Banking",
+              //  icon: <Building className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />,
+              //  description: "Empower your organization with blockchain-based village banking solutions.",
+              //  features: ["Manage multiple groups", "Automated processes", "Real-time analytics", "Custom terms"],
+              //  cta: "Partner With Us",
+              //  highlight: "500+ Organizations",
+              //},
             ].map((service, index) => (
               <div key={index} className="min-w-[280px] w-[85%] max-w-[340px] snap-center">
                 <Card className="h-full border-none shadow-lg dark:bg-gray-800">
