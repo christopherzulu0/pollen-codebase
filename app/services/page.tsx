@@ -554,7 +554,7 @@ export default function ServicesPage() {
                         <div className="p-2 rounded-full bg-[#00CC66]/10 dark:bg-emerald-900/30">
                           <Users className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />
                         </div>
-                        <h3 className="ml-2 text-2xl font-bold text-[#003366] dark:text-white">Individual Loans</h3>
+                        <h3 className="ml-2 text-2xl font-bold text-[#003366] dark:text-white">Loans</h3>
                       </div>
                       <p className="text-gray-600 dark:text-gray-300 mb-6">
                         Join a village banking group on our blockchain platform to access community-powered loans with
@@ -912,37 +912,37 @@ export default function ServicesPage() {
                   <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                     {[
                       {
-                        service: "Normal Loans",
+                        service: "Loans",
                         icon: <Wallet className="h-4 w-4 sm:h-5 sm:w-5 text-[#00CC66] dark:text-emerald-400" />,
                         idealFor: "Individuals and small businesses needing quick capital",
                         features: ["AI credit scoring", "Flexible terms", "No collateral needed"],
                         requirements: "Valid ID, 3+ months of transaction history",
                         action: "Apply Now",
                       },
+                      // {
+                      //   service: "Crypto Loans",
+                      //   icon: <Bitcoin className="h-4 w-4 sm:h-5 sm:w-5 text-[#00CC66] dark:text-emerald-400" />,
+                      //   idealFor: "Crypto holders who need liquidity without selling assets",
+                      //   features: ["Use crypto as collateral", "No credit checks", "Keep ownership of assets"],
+                      //   requirements: "Cryptocurrency holdings, wallet connection",
+                      //   action: "Get Loan",
+                      // },
                       {
-                        service: "Crypto Loans",
-                        icon: <Bitcoin className="h-4 w-4 sm:h-5 sm:w-5 text-[#00CC66] dark:text-emerald-400" />,
-                        idealFor: "Crypto holders who need liquidity without selling assets",
-                        features: ["Use crypto as collateral", "No credit checks", "Keep ownership of assets"],
-                        requirements: "Cryptocurrency holdings, wallet connection",
-                        action: "Get Loan",
+                       service: "Individual Loans",
+                       icon: <Users className="h-4 w-4 sm:h-5 sm:w-5 text-[#00CC66] dark:text-emerald-400" />,
+                       idealFor: "Community members seeking group-backed financing",
+                       features: ["Community support", "Lower rates", "Social accountability"],
+                       requirements: "Join a group or form a new group of 5-20 members",
+                       action: "Join Group",
                       },
-                      //{
-                      //  service: "Individual Village Banking",
-                      //  icon: <Users className="h-4 w-4 sm:h-5 sm:w-5 text-[#00CC66] dark:text-emerald-400" />,
-                      //  idealFor: "Community members seeking group-backed financing",
-                      //  features: ["Community support", "Lower rates", "Social accountability"],
-                      //  requirements: "Join a group or form a new group of 5-20 members",
-                      //  action: "Join Group",
-                      //},
-                      {
-                        service: "Institution Village Banking",
-                        icon: <Building className="h-4 w-4 sm:h-5 sm:w-5 text-[#00CC66] dark:text-emerald-400" />,
-                        idealFor: "Organizations managing community finance programs",
-                        features: ["Manage multiple groups", "Automated processes", "Custom reporting"],
-                        requirements: "Registered organization, implementation meeting",
-                        action: "Partner",
-                      },
+                      // {
+                      //   service: "Institution Village Banking",
+                      //   icon: <Building className="h-4 w-4 sm:h-5 sm:w-5 text-[#00CC66] dark:text-emerald-400" />,
+                      //   idealFor: "Organizations managing community finance programs",
+                      //   features: ["Manage multiple groups", "Automated processes", "Custom reporting"],
+                      //   requirements: "Registered organization, implementation meeting",
+                      //   action: "Partner",
+                      // },
                     ].map((item, index) => (
                       <tr
                         key={index}
