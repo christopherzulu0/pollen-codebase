@@ -287,7 +287,7 @@ export default function ServicesPage() {
                         <div className="p-2 rounded-full bg-[#00CC66]/10 dark:bg-emerald-900/30">
                           <Wallet className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />
                         </div>
-                        <h3 className="ml-2 text-2xl font-bold text-[#003366] dark:text-white">Loans</h3>
+                        <h3 className="ml-2 text-2xl font-bold text-[#003366] dark:text-white">Personal Loans</h3>
                       </div>
                       <p className="text-gray-600 dark:text-gray-300 mb-6">
                         Our AI-powered lending platform provides quick access to capital with flexible terms and
@@ -554,7 +554,7 @@ export default function ServicesPage() {
                         <div className="p-2 rounded-full bg-[#00CC66]/10 dark:bg-emerald-900/30">
                           <Users className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />
                         </div>
-                        <h3 className="ml-2 text-2xl font-bold text-[#003366] dark:text-white">Loans</h3>
+                        <h3 className="ml-2 text-2xl font-bold text-[#003366] dark:text-white">Group Loans</h3>
                       </div>
                       <p className="text-gray-600 dark:text-gray-300 mb-6">
                         Join a village banking group on our blockchain platform to access community-powered loans with
@@ -792,7 +792,7 @@ export default function ServicesPage() {
           <div className="overflow-x-auto pb-4 -mx-4 px-4 flex snap-x snap-mandatory gap-4 scrollbar-hide">
             {[
               {
-                title: "Loans",
+                title: "Personal Loans",
                 icon: <Wallet className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />,
                 description: "Quick access to capital with AI-powered credit scoring and no collateral required.",
                 features: ["Non-collateralized", "Flexible terms", "Instant approval", "No hidden fees"],
@@ -808,7 +808,7 @@ export default function ServicesPage() {
               //  highlight: "Up to 70% LTV",
               //},
               {
-                title: "Village Banking",
+                title: "Personal Loans",
                 icon: <Users className="h-6 w-6 text-[#00CC66] dark:text-emerald-400" />,
                 description: "Join a community-powered banking group with social accountability and shared growth.",
                 features: ["Community support", "Lower rates", "Build credit history", "Transparent terms"],
